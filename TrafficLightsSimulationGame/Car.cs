@@ -11,7 +11,7 @@ namespace TrafficSimulationGame
     {
         public int X { get; set; }
         public int Y { get; set; }
-        bool isWaiting { get; }
+        public bool isWaiting { get; set; }
         int velocity;
         Image car;
         public enum Direction
