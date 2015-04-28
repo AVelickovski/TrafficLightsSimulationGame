@@ -7,14 +7,87 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
 {
     public partial class NewGame : Form
     {
+        Image background;
+        TrafficLights Semaphores;
+        List<Car> carsNorth;
+        Timer timer1, timer2;
         public NewGame()
         {
             InitializeComponent();
+            background = Resources.PlayGround;
+            Semaphores = new TrafficLights();
+            Width = background.Size.Width;
+            Height = background.Size.Height + 10;
+            DoubleBuffered = true;
+            carsNorth = new List<Car>();
+            timer2 = new Timer();
+            timer2.Interval = 2000;
+            timer2.Tick += new EventHandler(Timer2_Tick); 
+            timer1 = new Timer();
+            timer1.Interval = 100;
+            timer1.Tick += new EventHandler(Timer1_Tick);
+            timer1.Start();
+            timer2.Start();
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            foreach (Car c in carsNorth)
+                c.moveCar(Semaphores.Lights[0].isGreen);
+            Invalidate();
+        }
+
+        private void NewGame_Paint(object sender, PaintEventArgs e)
+        {
+            e.Graphics.Clear(Color.White);
+            e.Graphics.DrawImage(background, 0, 0);
+            Semaphores.Draw(e.Graphics);
+            foreach (Car c in carsNorth)
+                c.draw(e.Graphics);
+        }
+
+        private void NewGame_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Location.X >= Semaphores.Lights[0].X && e.Location.X <= Semaphores.Lights[0].X + Semaphores.Lights[0].getWidth() && e.Location.Y >= Semaphores.Lights[0].Y && e.Location.Y <= Semaphores.Lights[0].Y + Semaphores.Lights[0].getHeight())
+            {
+                Semaphores.Lights[0].changeLight();
+            }
+            else if (e.Location.X >= Semaphores.Lights[1].X && e.Location.X <= Semaphores.Lights[1].X + Semaphores.Lights[1].getWidth() && e.Location.Y >= Semaphores.Lights[1].Y && e.Location.Y <= Semaphores.Lights[1].Y + Semaphores.Lights[1].getHeight())
+            {
+                Semaphores.Lights[1].changeLight();
+            }
+            else if (e.Location.X >= Semaphores.Lights[2].X && e.Location.X <= Semaphores.Lights[2].X + Semaphores.Lights[2].getWidth() && e.Location.Y >= Semaphores.Lights[2].Y && e.Location.Y <= Semaphores.Lights[2].Y + Semaphores.Lights[2].getHeight())
+            {
+                Semaphores.Lights[2].changeLight();
+            }
+            else if (e.Location.X >= Semaphores.Lights[3].X && e.Location.X <= Semaphores.Lights[3].X + Semaphores.Lights[3].getWidth() && e.Location.Y >= Semaphores.Lights[3].Y && e.Location.Y <= Semaphores.Lights[3].Y + Semaphores.Lights[3].getHeight())
+            {
+                Semaphores.Lights[3].changeLight();
+            }
+            Invalidate(true);
+        }
+
+        private void toolStripStatusLabel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolStripStatusLabel1.Text = String.Format("X: {0} Y: {1}", e.Location.X, e.Location.Y);
+        }
+
+        private void Timer2_Tick(object sender, EventArgs e)
+        {
+            if (carsNorth.Count == 0)
+                carsNorth.Add(new Car(540, -30, 1, Car.Direction.NORTH, null));
+            else
+                carsNorth.Add(new Car(540, -30, 1, Car.Direction.NORTH, carsNorth[carsNorth.Count - 1]));
+            if (timer2.Interval != 1000)
+                timer2.Interval -= 50;
+            else
+                timer2.Stop();
         }
     }
 }
