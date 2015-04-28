@@ -22,7 +22,10 @@ namespace TrafficLightsSimulationGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-
+            NewGame ng = new NewGame();
+            this.Visible = false;
+            ng.ShowDialog();
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
