@@ -12,8 +12,13 @@ namespace TrafficLightsSimulationGame
     {
         public int X { get; set; }
         public int Y { get; set; }
+<<<<<<< HEAD
         public bool isWaiting { get;  private set; }
         public int velocity { get; set; }
+=======
+        public bool isWaiting { get; set; }
+        int velocity;
+>>>>>>> 90cc3fe41764232b2ff3596ddc9fede12fdd466d
         Image car;
         Car inFront;
         public enum Direction

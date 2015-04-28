@@ -20,6 +20,7 @@ namespace TrafficLightsSimulationGame
         public Form1()
         {
             InitializeComponent();
+<<<<<<< HEAD
             background = Resources.PlayGround;
             Semaphores = new TrafficLights();
             Width = background.Size.Width;
@@ -89,6 +90,30 @@ namespace TrafficLightsSimulationGame
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
             toolStripStatusLabel1.Text = String.Format("X: {0} Y: {1}", e.Location.X, e.Location.Y);
+=======
+            this.BackgroundImage = Properties.Resources.TrafficJam;
+            this.Width = Properties.Resources.TrafficJam.Width;
+            this.Height = Properties.Resources.TrafficJam.Height;
+        }
+
+        private void btnStart_Click(object sender, EventArgs e)
+        {
+            NewGame ng = new NewGame();
+            this.Visible = false;
+            ng.ShowDialog();
+            
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnGuide_Click(object sender, EventArgs e)
+        {
+            Instructions ins = new Instructions();
+             ins.ShowDialog();
+>>>>>>> 90cc3fe41764232b2ff3596ddc9fede12fdd466d
         }
     }
 }
