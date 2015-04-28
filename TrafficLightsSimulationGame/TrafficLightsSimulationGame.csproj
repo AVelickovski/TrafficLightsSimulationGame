@@ -106,9 +106,7 @@
     <None Include="Resources\GreenLight.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Resources\PlayGround.png" />
-=======
     <None Include="Resources\IMG_0139.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -116,7 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\car-clipart-top-view-Red_racing_car_top_view.png" />
->>>>>>> 90cc3fe41764232b2ff3596ddc9fede12fdd466d
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
