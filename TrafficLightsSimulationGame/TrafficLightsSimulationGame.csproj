@@ -53,6 +53,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Semaphore.cs" />
+    <Compile Include="TrafficLights.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -87,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\GreenLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayGround.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
