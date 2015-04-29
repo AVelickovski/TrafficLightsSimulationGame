@@ -48,18 +48,22 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
             this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.toolStripStatusLabel1_MouseMove);
             // 
             // NewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(687, 350);
             this.Controls.Add(this.statusStrip1);
+            this.DoubleBuffered = true;
             this.Name = "NewGame";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewGame";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.NewGame_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NewGame_MouseClick);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NewGame_MouseMove);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -76,12 +76,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 509);
+            this.ClientSize = new System.Drawing.Size(968, 491);
             this.Controls.Add(this.btnGuide);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStart);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "StartInterface";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrafficLightsSimulationGame";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.StartInterface_Paint);

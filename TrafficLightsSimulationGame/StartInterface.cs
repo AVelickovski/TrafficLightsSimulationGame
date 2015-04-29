@@ -18,8 +18,8 @@ namespace TrafficLightsSimulationGame
         {
             InitializeComponent();
             bcground = Resources.TrafficJam;
-            Width = bcground.Size.Width;
-            Height = bcground.Size.Height;
+            Width = bcground.Size.Width-25;
+            Height =3* bcground.Size.Height/4;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
