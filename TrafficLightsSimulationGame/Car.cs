@@ -16,7 +16,7 @@ namespace TrafficLightsSimulationGame
         public int velocity { get; set; }
         public bool done { get; set; }
         Image car;
-        Car inFront;
+        public Car inFront { get; set; }
         public enum Direction
         {
             EAST,

@@ -67,22 +67,59 @@ namespace TrafficLightsSimulationGame
         }
         private void removeCar()
         {
-            foreach (Car c in carsEast)
+            if(carsNorth.Count != 0)
             {
-                if (c.done)
-                    carsEast.Remove(c);
+                if (carsNorth[0].Y > 595)
+                {
+                    if(carsNorth.Count == 1)
+                        carsNorth.RemoveAt(0);
+                    else
+                    {
+                        carsNorth[1].inFront = null;
+                        carsNorth.RemoveAt(0);
+                    }
+                }
+                    
             }
-            foreach (Car c in carsNorth)
+            if (carsEast.Count != 0)
             {
-                if (c.done)
-                    carsNorth.Remove(c);
+                if (carsEast[0].X + carsEast[0].getWidth()< 0)
+                {
+                    if (carsEast.Count == 1)
+                        carsEast.RemoveAt(0);
+                    else
+                    {
+                        carsEast[1].inFront = null;
+                        carsEast.RemoveAt(0);
+                    }
+                }
             }
-            // foreach (Car c in carsWest)
-            // if (c.done)
-            //carsWest.Remove(c);
-            //foreach (Car c in carsSouth)
-            //if (c.done)
-            //carsSouth.Remove(c);
+            if (carsSouth.Count != 0)
+            {
+                if (carsSouth[0].Y + carsSouth[0].getHeight() < 0)
+                {
+                    if (carsSouth.Count == 1)
+                        carsSouth.RemoveAt(0);
+                    else
+                    {
+                        carsSouth[1].inFront = null;
+                        carsSouth.RemoveAt(0);
+                    }
+                }
+            }
+            if (carsWest.Count != 0)
+            {
+                if (carsWest[0].X > 1353)
+                {
+                    if (carsWest.Count == 1)
+                        carsWest.RemoveAt(0);
+                    else
+                    {
+                        carsWest[1].inFront = null;
+                        carsWest.RemoveAt(0);
+                    }
+                }
+            }
         }
         public void move()
         {
@@ -94,7 +131,7 @@ namespace TrafficLightsSimulationGame
                 c.moveCar(Lights.Lights[2].isGreen);
             foreach (Car c in carsSouth)
                 c.moveCar(Lights.Lights[3].isGreen);
-            //removeCar();
+            removeCar();
         }
         public void inCollisionArea()
         {
@@ -233,7 +270,7 @@ namespace TrafficLightsSimulationGame
                 if (c.isWaiting)
                     i++;
             }
-            if (i == 10)
+            if (i == 6)
                 return true;
             else
                 i = 0;
