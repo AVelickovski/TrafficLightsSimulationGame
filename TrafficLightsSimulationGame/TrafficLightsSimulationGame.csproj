@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="ObjectType.cs" />
     <Compile Include="Stage.cs" />
     <Compile Include="StartInterface.cs">
       <SubType>Form</SubType>
@@ -123,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CarModel1W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BAM.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

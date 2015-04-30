@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
 {
@@ -124,13 +125,13 @@ namespace TrafficLightsSimulationGame
         public void move()
         {
             foreach (Car c in carsEast)
-                c.moveCar(Lights.Lights[1].isGreen);
+                c.move(Lights.Lights[1].isGreen);
             foreach (Car c in carsNorth)
-                c.moveCar(Lights.Lights[0].isGreen);
+                c.move(Lights.Lights[0].isGreen);
             foreach (Car c in carsWest)
-                c.moveCar(Lights.Lights[2].isGreen);
+                c.move(Lights.Lights[2].isGreen);
             foreach (Car c in carsSouth)
-                c.moveCar(Lights.Lights[3].isGreen);
+                c.move(Lights.Lights[3].isGreen);
             removeCar();
         }
         public void inCollisionArea()
@@ -187,7 +188,7 @@ namespace TrafficLightsSimulationGame
                 }
                 
         }
-        public bool checkCollision()
+        public Point checkCollision()
         {
             foreach(Car c in collisionArea)
             {
@@ -199,11 +200,11 @@ namespace TrafficLightsSimulationGame
                         {
                             case Car.Direction.NORTH:
                                 if ((c.X <= car.X + car.getWidth() && c.X > car.X && c.Y <= car.Y + car.getHeight() && c.Y > car.Y) || (c.X <= car.X + car.getWidth() && c.X > car.X && c.Y + c.getHeight() < car.Y + car.getHeight() && c.Y + c.getHeight() > car.Y))
-                                    return true;
+                                    return new Point(c.X - 20,c.Y);
                                 break;
                             case Car.Direction.SOUTH:
                                 if ((c.X <= car.X + car.getWidth() && c.X > car.X && c.Y <= car.Y + car.getHeight() && c.Y > car.Y) || (c.X <= car.X + car.getWidth() && c.X > car.X && c.Y + c.getHeight() < car.Y + car.getHeight() && c.Y + c.getHeight() > car.Y))
-                                    return true;
+                                    return new Point(c.X - 20, c.Y); ;
                                 break;
                         }
                     }
@@ -213,11 +214,11 @@ namespace TrafficLightsSimulationGame
                         {
                             case Car.Direction.EAST:
                                 if ((c.X + c.getWidth() >= car.X && c.X + c.getWidth() <= car.X + car.getWidth() && c.Y + c.getHeight() >= car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()) || (c.X >= car.X && c.X <= car.X + car.getWidth() && c.Y + c.getHeight() >= car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()))
-                                    return true;
+                                    return new Point(c.X, c.Y + 30); ;
                                 break;
                             case Car.Direction.WEST:
                                 if ((c.X + c.getWidth() >= car.X && c.X + c.getWidth() <= car.X + car.getWidth() && c.Y + c.getHeight() >= car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()) || (c.X >= car.X && c.X <= car.X + car.getWidth() && c.Y + c.getHeight() >= car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()))
-                                    return true;
+                                    return new Point(c.X, c.Y + 30); ;
                                 break;
                         }
                     }
@@ -227,11 +228,11 @@ namespace TrafficLightsSimulationGame
                         {
                             case Car.Direction.NORTH:
                                 if ((c.X + c.getWidth() >= car.X && c.X + c.getWidth() <= car.X + car.getWidth() && c.Y >= car.Y && c.Y <= car.Y + car.getHeight()) || (c.X + c.getWidth() >= car.X && c.X + c.getWidth() <= car.X + car.getWidth() && c.Y + c.getHeight() > car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()))
-                                    return true;
+                                    return new Point(c.X + 20, c.Y); ;
                                 break;
                             case Car.Direction.SOUTH:
                                 if ((c.X + c.getWidth() >= car.X && c.X + c.getWidth() <= car.X + car.getWidth() && c.Y >= car.Y && c.Y <= car.Y + car.getHeight()) || (c.X + c.getWidth() >= car.X && c.X + c.getWidth() <= car.X + car.getWidth() && c.Y + c.getHeight() > car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()))
-                                    return true;
+                                    return new Point(c.X + 20, c.Y); ;
                                 break;
                         }
                     }
@@ -241,17 +242,17 @@ namespace TrafficLightsSimulationGame
                         {
                             case Car.Direction.WEST:
                                 if ((c.X >= car.X && c.X <= car.X + car.getWidth() && c.Y >= car.Y && c.Y <= car.Y + car.getHeight()) || (c.X >= car.X && c.X <= car.X + car.getWidth() && c.Y + c.getHeight() >= car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()))
-                                    return true;
+                                    return new Point(c.X, c.Y - 20); ;
                                 break;
                             case Car.Direction.EAST:
                                 if ((c.X >= car.X && c.X <= car.X + car.getWidth() && c.Y >= car.Y && c.Y <= car.Y + car.getHeight()) || (c.X >= car.X && c.X <= car.X + car.getWidth() && c.Y + c.getHeight() >= car.Y && c.Y + c.getHeight() < car.Y + car.getHeight()))
-                                    return true;
+                                    return new Point(c.X, c.Y -20); ;
                                 break;
                         }
                     }
                 }
             }
-            return false;
+            return Point.Empty;
         }
         public bool checkJam()
         {
@@ -293,6 +294,10 @@ namespace TrafficLightsSimulationGame
             else
                 i = 0;
             return false;
+        }
+        public void drawBam(Point loc, Graphics g)
+        {
+            g.DrawImage(Resources.BAM, loc.X, loc.Y);
         }
     }
 }

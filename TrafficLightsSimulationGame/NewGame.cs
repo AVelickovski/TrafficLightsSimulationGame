@@ -16,7 +16,8 @@ namespace TrafficLightsSimulationGame
         Image background;
         Stage stage;
         Random rnd;
-        Timer timer1, timer2;
+        Point p;
+        Timer timer1, timer2,timer3;
         public NewGame()
         {
             InitializeComponent();
@@ -26,31 +27,43 @@ namespace TrafficLightsSimulationGame
             Height = background.Size.Height + 10;
             DoubleBuffered = true;
             rnd = new Random();
+            timer3 = new Timer();
+            timer3.Tick += new EventHandler(Timer3_Tick);
+            timer3.Interval = 3000;
             timer2 = new Timer();
             timer2.Interval = 2000;
             timer2.Tick += new EventHandler(Timer2_Tick); 
             timer1 = new Timer();
-            timer1.Interval = 100;
+            timer1.Interval = 50;
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
             timer2.Start();
         }
 
+        private void Timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Stop();
+            if (MessageBox.Show("Collision!\nDo you want to play again?", "Game over", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                stage = new Stage();
+                timer1.Start();
+                timer2.Start();
+                Invalidate();
+            }
+            else
+                this.Close();
+        }
+
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            if (stage.checkCollision())
+            p = stage.checkCollision();
+            if (!p.IsEmpty)
             {
                 timer1.Stop();
                 timer2.Stop();
-                if (MessageBox.Show("Collision!\nDo you want to play again?", "Game over", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    stage = new Stage();
-                    timer1.Start();
-                    timer2.Start();
-                    Invalidate();
-                }
-                else
-                    this.Close();
+                Graphics g = CreateGraphics();
+                stage.drawBam(p, g);
+                timer3.Start();
             }
             else
             {

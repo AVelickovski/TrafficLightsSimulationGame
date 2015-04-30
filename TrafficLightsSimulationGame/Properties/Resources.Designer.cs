@@ -63,6 +63,16 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BAM {
+            get {
+                object obj = ResourceManager.GetObject("BAM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CarModel1E {
             get {
                 object obj = ResourceManager.GetObject("CarModel1E", resourceCulture);
