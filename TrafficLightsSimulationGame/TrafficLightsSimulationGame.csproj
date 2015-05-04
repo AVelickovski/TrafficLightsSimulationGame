@@ -108,9 +108,6 @@
     <None Include="Resources\GreenLight.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\PlayGround.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\TrafficJam.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BAM.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayGround.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
