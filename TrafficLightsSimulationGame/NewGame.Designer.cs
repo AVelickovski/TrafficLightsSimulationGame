@@ -57,10 +57,11 @@
             this.ClientSize = new System.Drawing.Size(687, 350);
             this.Controls.Add(this.statusStrip1);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "NewGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewGame";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.NewGame_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NewGame_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NewGame_MouseMove);

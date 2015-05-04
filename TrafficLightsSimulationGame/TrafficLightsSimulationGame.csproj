@@ -44,9 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
+    <Compile Include="Vehicle.cs" />
     <Compile Include="Man.cs" />
     <Compile Include="ObjectType.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Stage.cs" />
     <Compile Include="StartInterface.cs">
       <SubType>Form</SubType>
@@ -81,14 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,21 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CarModel1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CarModel1E.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CarModel1S.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CarModel1W.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BAM.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\PlayGround.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ambulanta.png" />
@@ -154,7 +139,10 @@
     <None Include="Resources\RedLight.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\audi.png" />
+    <None Include="Resources\bam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pomala.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,12 +8,12 @@ using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
 {
-    public class Car : ObjectType
+    public class Vehicle : ObjectType
     {
         public bool isWaiting { get;  private set; }
         Image car;
-        public Car inFront { get; set; }
-        public Car(int x, int y,int type,Direction direction,Car last) : base(x,y,direction)
+        public Vehicle inFront { get; set; }
+        public Vehicle(int x, int y,int type,Direction direction,Vehicle last) : base(x,y,direction)
         {
             isWaiting = false;
             if (type == 1)
@@ -21,16 +21,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.CarModel1E;
+                        car = Resources.CarModel1;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.CarModel1N;
+                        car = Resources.CarModel1;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.CarModel1S;
+                        car = Resources.CarModel1;
                         break;
                     case Direction.WEST:
-                        car = Resources.CarModel1W;
+                        car = Resources.CarModel1;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -63,14 +66,14 @@ namespace TrafficLightsSimulationGame
                             isWaiting = true;
                         }
                     }
-                    if (Y+car.Size.Height > 240)
+                    if (Y+car.Size.Height > 215)
                         Y += velocity;
-                    else if (Y+car.Size.Height + velocity >= 240 && !Green)
+                    else if (Y+car.Size.Height + velocity >= 215 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((Y+car.Size.Height + velocity >= 240 || velocity==0) && Green)
+                    else if ((Y+car.Size.Height + velocity >= 215 || velocity==0) && Green)
                     {
                         velocity = 5;
                         Y += velocity;
@@ -78,7 +81,7 @@ namespace TrafficLightsSimulationGame
                     }
                     else
                         Y += velocity;
-                    if (Y >= 575)
+                    if (Y >= 648)
                         done = true;
                     break;
                 case Direction.SOUTH:
@@ -90,14 +93,14 @@ namespace TrafficLightsSimulationGame
                             isWaiting = true;
                         }
                     }
-                    if (Y < 388)
+                    if (Y < 498)
                         Y -= velocity;
-                    else if (Y - velocity <= 388 && !Green)
+                    else if (Y - velocity <= 498 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((Y - velocity <= 388 || velocity == 0) && Green)
+                    else if ((Y - velocity <= 498 || velocity == 0) && Green)
                     {
                         velocity = 5;
                         Y -= velocity;
@@ -119,14 +122,14 @@ namespace TrafficLightsSimulationGame
                         else
                             isWaiting = false;
                     }
-                    if (X  < 715)
+                    if (X  < 690)
                         X -= velocity;
-                    else if (X - velocity <= 715 && !Green)
+                    else if (X - velocity <= 690 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((X - velocity <= 715 || velocity == 0) && Green)
+                    else if ((X - velocity <= 690 || velocity == 0) && Green)
                     {
                         velocity = 5;
                         X -= velocity;
@@ -148,14 +151,14 @@ namespace TrafficLightsSimulationGame
                         else
                             isWaiting = false;
                     }
-                    if (X + car.Size.Width > 510)
+                    if (X + car.Size.Width > 405)
                         X += velocity;
-                    else if (X + car.Size.Width + velocity >= 510 && !Green)
+                    else if (X + car.Size.Width + velocity >= 405 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((X + velocity >= 510 || velocity == 0) && Green)
+                    else if ((X + velocity >= 405 || velocity == 0) && Green)
                     {
                         velocity = 5;
                         X += velocity;
@@ -163,7 +166,7 @@ namespace TrafficLightsSimulationGame
                     }
                     else
                         X += velocity;
-                    if (X >= 1343)
+                    if (X >= 1078)
                         done = true;
                     break;
             }
