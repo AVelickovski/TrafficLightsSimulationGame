@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="Man.cs" />
     <Compile Include="ObjectType.cs" />
     <Compile Include="Stage.cs" />
     <Compile Include="StartInterface.cs">
