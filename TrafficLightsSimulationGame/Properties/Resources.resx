@@ -118,29 +118,44 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ambulanta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ambulanta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="audi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BAM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BAM.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CarModel1E" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarModel1E.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CarModel1N" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarModel1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CarModel1S" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarModel1S.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CarModel1W" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CarModel1W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ford" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ford.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GreenLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GreenLight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kamion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kamion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="karavan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karavan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kombe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kombe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PlayGround" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayGround.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="policija" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\policija.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RedLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RedLight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="taksi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\taksi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="TrafficJam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TrafficJam.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
