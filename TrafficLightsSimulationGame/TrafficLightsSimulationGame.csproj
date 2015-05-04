@@ -102,12 +102,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedLight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GreenLight.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\TrafficJam.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +121,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PlayGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulanta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ford.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kamion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\karavan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kombe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\policija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\taksi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

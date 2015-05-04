@@ -63,6 +63,26 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ambulanta {
+            get {
+                object obj = ResourceManager.GetObject("ambulanta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap audi {
+            get {
+                object obj = ResourceManager.GetObject("audi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BAM {
             get {
                 object obj = ResourceManager.GetObject("BAM", resourceCulture);
@@ -73,39 +93,9 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CarModel1E {
+        internal static System.Drawing.Bitmap ford {
             get {
-                object obj = ResourceManager.GetObject("CarModel1E", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CarModel1N {
-            get {
-                object obj = ResourceManager.GetObject("CarModel1N", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CarModel1S {
-            get {
-                object obj = ResourceManager.GetObject("CarModel1S", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CarModel1W {
-            get {
-                object obj = ResourceManager.GetObject("CarModel1W", resourceCulture);
+                object obj = ResourceManager.GetObject("ford", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +113,46 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kamion {
+            get {
+                object obj = ResourceManager.GetObject("kamion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap karavan {
+            get {
+                object obj = ResourceManager.GetObject("karavan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kola {
+            get {
+                object obj = ResourceManager.GetObject("kola", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kombe {
+            get {
+                object obj = ResourceManager.GetObject("kombe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PlayGround {
             get {
                 object obj = ResourceManager.GetObject("PlayGround", resourceCulture);
@@ -133,9 +163,29 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap policija {
+            get {
+                object obj = ResourceManager.GetObject("policija", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RedLight {
             get {
                 object obj = ResourceManager.GetObject("RedLight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taksi {
+            get {
+                object obj = ResourceManager.GetObject("taksi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
