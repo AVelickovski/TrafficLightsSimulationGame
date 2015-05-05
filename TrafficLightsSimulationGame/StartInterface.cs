@@ -15,7 +15,8 @@ namespace TrafficLightsSimulationGame
     public partial class StartInterface : Form
     {
         Image bcground;
-        
+        public SoundPlayer kopce;
+
         public StartInterface()
         {
             InitializeComponent();
@@ -26,7 +27,9 @@ namespace TrafficLightsSimulationGame
 
         private void btnStart_Click(object sender, EventArgs e)
         {
+            kopce.Play();
             NewGame ng = new NewGame();
+            ng.StartPosition = FormStartPosition.CenterScreen;
             this.Visible = false;
             ng.ShowDialog();
             this.Visible = true;
@@ -34,13 +37,16 @@ namespace TrafficLightsSimulationGame
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            kopce.Play();            
             Application.Exit();
         }
 
         private void btnGuide_Click(object sender, EventArgs e)
         {
+            kopce.Play();
             Instructions ins = new Instructions();
-             ins.ShowDialog();
+            ins.StartPosition = FormStartPosition.CenterScreen;
+            ins.ShowDialog();
         }
 
         private void StartInterface_Paint(object sender, PaintEventArgs e)
@@ -51,6 +57,7 @@ namespace TrafficLightsSimulationGame
 
         private void StartInterface_Load(object sender, EventArgs e)
         {
+            kopce = new SoundPlayer(Resources.kopce);
         }
     }
 }
