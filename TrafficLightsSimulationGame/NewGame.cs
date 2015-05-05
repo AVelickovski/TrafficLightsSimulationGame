@@ -32,7 +32,7 @@ namespace TrafficLightsSimulationGame
             rnd = new Random();
             timer3 = new Timer();
             timer3.Tick += new EventHandler(Timer3_Tick);
-            timer3.Interval = 3000;
+            timer3.Interval = 2000;
             timer2 = new Timer();
             timer2.Interval = 2000;
             timer2.Tick += new EventHandler(Timer2_Tick); 
