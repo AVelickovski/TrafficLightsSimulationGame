@@ -22,7 +22,7 @@ namespace TrafficLightsSimulationGame
         }
         public Direction dir;
         public ObjectType(int x, int y, Direction d)
-        {
+        {            
             X = x;
             Y = y;
             done = false;

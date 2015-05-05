@@ -89,6 +89,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrafficLightsSimulationGame";
+            this.Load += new System.EventHandler(this.StartInterface_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.StartInterface_Paint);
             this.ResumeLayout(false);
 

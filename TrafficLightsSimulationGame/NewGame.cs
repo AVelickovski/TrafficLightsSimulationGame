@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
@@ -18,6 +19,8 @@ namespace TrafficLightsSimulationGame
         Random rnd;
         Point p;
         Timer timer1, timer2,timer3;
+        public SoundPlayer kopce;
+
         public NewGame()
         {
             InitializeComponent();
@@ -82,20 +85,25 @@ namespace TrafficLightsSimulationGame
 
         private void NewGame_MouseClick(object sender, MouseEventArgs e)
         {
-            if (e.Location.X >= stage.Lights.Lights[0].X && e.Location.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() && e.Location.Y >= stage.Lights.Lights[0].Y && e.Location.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight())
-            {
+            kopce = new SoundPlayer(Resources.kopce);
+            if (e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
+            {                
+                kopce.Play();
                 stage.Lights.Lights[0].changeLight();
             }
-            else if (e.Location.X >= stage.Lights.Lights[1].X && e.Location.X <= stage.Lights.Lights[1].X + stage.Lights.Lights[1].getWidth() && e.Location.Y >= stage.Lights.Lights[1].Y && e.Location.Y <= stage.Lights.Lights[1].Y + stage.Lights.Lights[1].getHeight())
+            else if (e.X >= stage.Lights.Lights[1].X && e.X <= stage.Lights.Lights[1].X + stage.Lights.Lights[1].getWidth() + 20 && e.Y >= stage.Lights.Lights[1].Y && e.Y <= stage.Lights.Lights[1].Y + stage.Lights.Lights[1].getHeight() + 20)
             {
+                kopce.Play();
                 stage.Lights.Lights[1].changeLight();
             }
-            else if (e.Location.X >= stage.Lights.Lights[2].X && e.Location.X <= stage.Lights.Lights[2].X + stage.Lights.Lights[2].getWidth() && e.Location.Y >= stage.Lights.Lights[2].Y && e.Location.Y <= stage.Lights.Lights[2].Y + stage.Lights.Lights[2].getHeight())
+            else if (e.X >= stage.Lights.Lights[2].X && e.X <= stage.Lights.Lights[2].X + stage.Lights.Lights[2].getWidth() + 20 && e.Y >= stage.Lights.Lights[2].Y && e.Y <= stage.Lights.Lights[2].Y + stage.Lights.Lights[2].getHeight() + 20)
             {
+                kopce.Play();
                 stage.Lights.Lights[2].changeLight();
             }
-            else if (e.Location.X >= stage.Lights.Lights[3].X && e.Location.X <= stage.Lights.Lights[3].X + stage.Lights.Lights[3].getWidth() && e.Location.Y >= stage.Lights.Lights[3].Y && e.Location.Y <= stage.Lights.Lights[3].Y + stage.Lights.Lights[3].getHeight())
+            else if (e.X >= stage.Lights.Lights[3].X && e.X <= stage.Lights.Lights[3].X + stage.Lights.Lights[3].getWidth() + 20 && e.Y >= stage.Lights.Lights[3].Y && e.Y <= stage.Lights.Lights[3].Y + stage.Lights.Lights[3].getHeight() + 20)
             {
+                kopce.Play();
                 stage.Lights.Lights[3].changeLight();
             }
             Invalidate(true);
@@ -104,6 +112,25 @@ namespace TrafficLightsSimulationGame
         private void NewGame_MouseMove(object sender, MouseEventArgs e)
         {
             toolStripStatusLabel1.Text = String.Format("X: {0}, Y: {1}",e.Location.X, e.Location.Y);
+            if(e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
+            {
+                this.Cursor = Cursors.Hand;
+            }
+            else if(e.X >= stage.Lights.Lights[1].X && e.X <= stage.Lights.Lights[1].X + stage.Lights.Lights[1].getWidth() + 20 && e.Y >= stage.Lights.Lights[1].Y && e.Y <= stage.Lights.Lights[1].Y + stage.Lights.Lights[1].getHeight() + 20)
+            {
+                this.Cursor = Cursors.Hand;
+            }
+            else if (e.X >= stage.Lights.Lights[2].X && e.X <= stage.Lights.Lights[2].X + stage.Lights.Lights[2].getWidth() + 20 && e.Y >= stage.Lights.Lights[2].Y && e.Y <= stage.Lights.Lights[2].Y + stage.Lights.Lights[2].getHeight() + 20)
+            {
+                this.Cursor = Cursors.Hand;
+            }
+            else if (e.X >= stage.Lights.Lights[3].X && e.X <= stage.Lights.Lights[3].X + stage.Lights.Lights[3].getWidth() + 20 && e.Y >= stage.Lights.Lights[3].Y && e.Y <= stage.Lights.Lights[3].Y + stage.Lights.Lights[3].getHeight() + 20)
+            {
+                this.Cursor = Cursors.Hand;
+            }
+            else {
+                this.Cursor = Cursors.Default;
+            }
         }
 
         private void Timer2_Tick(object sender, EventArgs e)
@@ -123,6 +150,11 @@ namespace TrafficLightsSimulationGame
                 else
                     this.Close();
             }
+        }
+
+        private void NewGame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
