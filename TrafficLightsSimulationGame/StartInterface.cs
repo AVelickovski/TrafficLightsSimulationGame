@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
@@ -14,6 +15,7 @@ namespace TrafficLightsSimulationGame
     public partial class StartInterface : Form
     {
         Image bcground;
+        
         public StartInterface()
         {
             InitializeComponent();
@@ -45,6 +47,10 @@ namespace TrafficLightsSimulationGame
         {
             e.Graphics.Clear(Color.White);
             e.Graphics.DrawImage(bcground, 0, 0);
+        }
+
+        private void StartInterface_Load(object sender, EventArgs e)
+        {
         }
     }
 }
