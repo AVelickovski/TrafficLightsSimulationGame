@@ -11,7 +11,6 @@ namespace TrafficLightsSimulationGame
     public class Vehicle : ObjectType
     {
         public bool isWaiting { get;  private set; }
-        Image car;
         public Vehicle inFront { get; set; }
         public Vehicle(int x, int y,int type,Direction direction,Vehicle last) : base(x,y,direction)
         {
@@ -21,19 +20,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.audi;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.audi;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.audi;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.audi;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.audi;
+                        Model = Resources.audi;
                         break;
                     case Direction.WEST:
-                        car = Resources.audi;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.audi;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -42,19 +41,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.ford;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.ford;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.ford;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.ford;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.ford;
+                        Model = Resources.ford;
                         break;
                     case Direction.WEST:
-                        car = Resources.ford;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.ford;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -63,19 +62,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.ambulanta;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.ambulanta;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.ambulanta;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.ambulanta;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.ambulanta;
+                        Model = Resources.ambulanta;
                         break;
                     case Direction.WEST:
-                        car = Resources.ambulanta;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.ambulanta;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -84,19 +83,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.karavan;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.karavan;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.karavan;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.karavan;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.karavan;
+                        Model = Resources.karavan;
                         break;
                     case Direction.WEST:
-                        car = Resources.karavan;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.karavan;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -105,19 +104,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.kola;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.kola;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.kola;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.kola;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.kola;
+                        Model = Resources.kola;
                         break;
                     case Direction.WEST:
-                        car = Resources.kola;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.kola;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -126,19 +125,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.kombe;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.kombe;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.kombe;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.kombe;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.kombe;
+                        Model = Resources.kombe;
                         break;
                     case Direction.WEST:
-                        car = Resources.kombe;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.kombe;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -147,19 +146,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.policija;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.policija;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.policija;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.policija;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.policija;
+                        Model = Resources.policija;
                         break;
                     case Direction.WEST:
-                        car = Resources.policija;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.policija;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -168,19 +167,19 @@ namespace TrafficLightsSimulationGame
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.taxi;
-                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        Model = Resources.taxi;
+                        Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.taxi;
-                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        Model = Resources.taxi;
+                        Model.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.taxi;
+                        Model = Resources.taxi;
                         break;
                     case Direction.WEST:
-                        car = Resources.taxi;
-                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        Model = Resources.taxi;
+                        Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
             }
@@ -189,16 +188,16 @@ namespace TrafficLightsSimulationGame
 
         public override void draw(Graphics g)
         {
-            Image image = (Bitmap)car.Clone();
+            Image image = (Bitmap)Model.Clone();
             g.DrawImage(image, X, Y, image.Width, image.Height);
         }
         public int getWidth()
         {
-            return car.Size.Width;
+            return Model.Size.Width;
         }
         public int getHeight()
         {
-            return car.Size.Height;
+            return Model.Size.Height;
         }
 
         public void move(bool Green)
@@ -208,20 +207,20 @@ namespace TrafficLightsSimulationGame
                 case Direction.NORTH:
                     if(inFront!= null)
                     {
-                        if(Y+car.Size.Height+velocity >= inFront.Y)
+                        if(Y+Model.Size.Height+velocity >= inFront.Y)
                         {
                             velocity = 0;
                             isWaiting = true;
                         }
                     }
-                    if (Y+car.Size.Height > 215)
+                    if (Y+Model.Size.Height > 215)
                         Y += velocity;
-                    else if (Y+car.Size.Height + velocity >= 215 && !Green)
+                    else if (Y+Model.Size.Height + velocity >= 215 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((Y+car.Size.Height + velocity >= 215 || velocity==0) && Green)
+                    else if ((Y+Model.Size.Height + velocity >= 215 || velocity==0) && Green)
                     {
                         velocity = 8;
                         Y += velocity;
@@ -235,7 +234,7 @@ namespace TrafficLightsSimulationGame
                 case Direction.SOUTH:
                     if (inFront != null)
                     {
-                        if (Y - velocity <= inFront.Y + inFront.car.Size.Height)
+                        if (Y - velocity <= inFront.Y + inFront.Model.Size.Height)
                         {
                             velocity = 0;
                             isWaiting = true;
@@ -256,13 +255,13 @@ namespace TrafficLightsSimulationGame
                     }
                     else
                         Y -= velocity;
-                    if (Y + car.Size.Height <= 0)
+                    if (Y + Model.Size.Height <= 0)
                         done = true;
                     break;
                 case Direction.EAST:
                     if (inFront != null)
                     {
-                        if (X - velocity <= inFront.X + inFront.car.Size.Width)
+                        if (X - velocity <= inFront.X + inFront.Model.Size.Width)
                         {
                             velocity = 0;
                             isWaiting = true;
@@ -285,13 +284,13 @@ namespace TrafficLightsSimulationGame
                     }
                     else
                         X -= velocity;
-                    if (X + car.Size.Width <= 0)
+                    if (X + Model.Size.Width <= 0)
                         done = true;
                     break;
                 case Direction.WEST:
                     if (inFront != null)
                     {
-                        if (X + car.Size.Width + velocity >= inFront.X)
+                        if (X + Model.Size.Width + velocity >= inFront.X)
                         {
                             velocity = 0;
                             isWaiting = true;
@@ -299,9 +298,9 @@ namespace TrafficLightsSimulationGame
                         else
                             isWaiting = false;
                     }
-                    if (X + car.Size.Width > 482)
+                    if (X + Model.Size.Width > 482)
                         X += velocity;
-                    else if (X + car.Size.Width + velocity >= 482 && !Green)
+                    else if (X + Model.Size.Width + velocity >= 482 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;

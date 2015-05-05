@@ -18,7 +18,7 @@ namespace TrafficLightsSimulationGame
         Stage stage;
         Random rnd;
         Point p;
-        Timer timer1, timer2,timer3;
+        Timer timer1, timer2,timer3,timer4;
         public SoundPlayer kopce;
 
         public NewGame()
@@ -30,6 +30,9 @@ namespace TrafficLightsSimulationGame
             Height = background.Size.Height + 10;
             DoubleBuffered = true;
             rnd = new Random();
+            timer4 = new Timer();
+            timer4.Interval = 5000;
+            timer4.Tick += new EventHandler(Timer4_Tick);
             timer3 = new Timer();
             timer3.Tick += new EventHandler(Timer3_Tick);
             timer3.Interval = 2000;
@@ -37,10 +40,16 @@ namespace TrafficLightsSimulationGame
             timer2.Interval = 2000;
             timer2.Tick += new EventHandler(Timer2_Tick); 
             timer1 = new Timer();
-            timer1.Interval = 40;
+            timer1.Interval = 50;
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
-            timer2.Start();
+           // timer2.Start();
+            timer4.Start();
+        }
+
+        private void Timer4_Tick(object sender, EventArgs e)
+        {
+            stage.addMan(rnd.Next(4), rnd.Next(2), rnd.Next(3), rnd.Next(2), rnd.Next(3));
         }
 
         private void Timer3_Tick(object sender, EventArgs e)
@@ -51,6 +60,8 @@ namespace TrafficLightsSimulationGame
                 stage = new Stage();
                 timer1.Start();
                 timer2.Start();
+                timer4.Start();
+
                 Invalidate();
             }
             else
@@ -64,6 +75,7 @@ namespace TrafficLightsSimulationGame
             {
                 timer1.Stop();
                 timer2.Stop();
+                timer4.Stop();
                 Graphics g = CreateGraphics();
                 stage.drawBam(p, g);
                 timer3.Start();
@@ -135,26 +147,23 @@ namespace TrafficLightsSimulationGame
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
-            stage.add(rnd.Next(4), rnd.Next(8));
+            stage.addCar(rnd.Next(4), rnd.Next(8));
             if(stage.checkJam())
             {
                 timer1.Stop();
                 timer2.Stop();
+                timer4.Stop();
                 if (MessageBox.Show("Traffic Jam!\nDo you want to play again?", "Game over", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     stage = new Stage();
                     timer1.Start();
                     timer2.Start();
+                    timer4.Start();
                     Invalidate();
                 }
                 else
                     this.Close();
             }
-        }
-
-        private void NewGame_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

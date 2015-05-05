@@ -13,6 +13,8 @@ namespace TrafficLightsSimulationGame
         public int Y { get; set; }
         public int velocity { get; set; }
         public bool done { get; set; }
+        protected Image Model;
+        protected int type;
         public enum Direction
         {
             EAST,
@@ -28,8 +30,8 @@ namespace TrafficLightsSimulationGame
             done = false;
             velocity = 8;
             dir = d;
+            Model = null;
         }
         public abstract void draw(Graphics g);
-        //public abstract void move(bool Green);
     }
 }
