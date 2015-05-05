@@ -43,7 +43,7 @@ namespace TrafficLightsSimulationGame
             timer1.Interval = 50;
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
-           // timer2.Start();
+            timer2.Start();
             timer4.Start();
         }
 
