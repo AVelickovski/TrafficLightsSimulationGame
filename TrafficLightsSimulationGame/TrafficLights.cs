@@ -14,10 +14,10 @@ namespace TrafficLightsSimulationGame
         public TrafficLights()
         {
             Lights = new List<Semaphore>(4);
-            Lights.Add(new Semaphore(354, 158));
-            Lights.Add(new Semaphore(679, 158));
-            Lights.Add(new Semaphore(354, 483));
-            Lights.Add(new Semaphore(679, 483));
+            Lights.Add(new Semaphore(430, 162));
+            Lights.Add(new Semaphore(808, 162));
+            Lights.Add(new Semaphore(430, 490));
+            Lights.Add(new Semaphore(808, 490));
         }
 
         public void Draw(Graphics g)

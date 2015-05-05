@@ -73,6 +73,16 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap audi {
+            get {
+                object obj = ResourceManager.GetObject("audi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BAM {
             get {
                 object obj = ResourceManager.GetObject("BAM", resourceCulture);
@@ -93,6 +103,86 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap covek_desno {
+            get {
+                object obj = ResourceManager.GetObject("covek_desno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap covek_dole {
+            get {
+                object obj = ResourceManager.GetObject("covek_dole", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap covek_gore {
+            get {
+                object obj = ResourceManager.GetObject("covek_gore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap covek_levo {
+            get {
+                object obj = ResourceManager.GetObject("covek_levo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dete_desno {
+            get {
+                object obj = ResourceManager.GetObject("dete_desno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dete_dole {
+            get {
+                object obj = ResourceManager.GetObject("dete_dole", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dete_gore {
+            get {
+                object obj = ResourceManager.GetObject("dete_gore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dete_levo {
+            get {
+                object obj = ResourceManager.GetObject("dete_levo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ford {
             get {
                 object obj = ResourceManager.GetObject("ford", resourceCulture);
@@ -103,9 +193,9 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap GreenLight {
+        internal static System.Drawing.Bitmap isklucen {
             get {
-                object obj = ResourceManager.GetObject("GreenLight", resourceCulture);
+                object obj = ResourceManager.GetObject("isklucen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +263,9 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RedLight {
+        internal static System.Drawing.Bitmap starce_desno {
             get {
-                object obj = ResourceManager.GetObject("RedLight", resourceCulture);
+                object obj = ResourceManager.GetObject("starce_desno", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +273,39 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap taksi {
+        internal static System.Drawing.Bitmap starce_dole {
             get {
-                object obj = ResourceManager.GetObject("taksi", resourceCulture);
+                object obj = ResourceManager.GetObject("starce_dole", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starce_gore {
+            get {
+                object obj = ResourceManager.GetObject("starce_gore", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap starce_levo {
+            get {
+                object obj = ResourceManager.GetObject("starce_levo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap taxi {
+            get {
+                object obj = ResourceManager.GetObject("taxi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +316,16 @@ namespace TrafficLightsSimulationGame.Properties {
         internal static System.Drawing.Bitmap TrafficJam {
             get {
                 object obj = ResourceManager.GetObject("TrafficJam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uklucen {
+            get {
+                object obj = ResourceManager.GetObject("uklucen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -44,14 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="Man.cs" />
-    <Compile Include="ObjectType.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="Man.cs" />
+    <Compile Include="ObjectType.cs" />
     <Compile Include="Stage.cs" />
     <Compile Include="StartInterface.cs">
       <SubType>Form</SubType>
@@ -109,40 +109,82 @@
     <None Include="Resources\CarModel1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ambulanta.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ford.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kamion.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\karavan.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kola.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kombe.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\policija.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\taksi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\GreenLight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RedLight.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bam.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pomala.png" />
+    <None Include="Resources\PlayGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\ambulanta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\audi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\ford.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\kamion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\karavan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\kola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\kombe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\policija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\koli\taxi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\covek-desno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\covek-dole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\covek-gore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\covek-levo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\dete-desno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\dete-dole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\dete-gore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\dete-levo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\starce-desno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\starce-dole.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\starce-gore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\luge\starce-levo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\semafor\isklucen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\semafor\uklucen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\za igrata\ikona.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -34,7 +34,7 @@ namespace TrafficLightsSimulationGame
             timer2.Interval = 2000;
             timer2.Tick += new EventHandler(Timer2_Tick); 
             timer1 = new Timer();
-            timer1.Interval = 50;
+            timer1.Interval = 40;
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
             timer2.Start();
@@ -108,8 +108,7 @@ namespace TrafficLightsSimulationGame
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
-            int i = rnd.Next(4);
-            stage.add(i);
+            stage.add(rnd.Next(4), rnd.Next(9));
             if(stage.checkJam())
             {
                 timer1.Stop();

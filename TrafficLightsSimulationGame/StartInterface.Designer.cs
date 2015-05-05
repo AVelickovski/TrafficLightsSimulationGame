@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartInterface));
             this.btnStart = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnGuide = new System.Windows.Forms.Button();
@@ -81,6 +82,9 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStart);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "StartInterface";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

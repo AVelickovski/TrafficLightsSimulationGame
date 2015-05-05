@@ -16,23 +16,191 @@ namespace TrafficLightsSimulationGame
         public Vehicle(int x, int y,int type,Direction direction,Vehicle last) : base(x,y,direction)
         {
             isWaiting = false;
-            if (type == 1)
+            if (type == 0)
             {
                 switch (dir)
                 {
                     case Direction.EAST:
-                        car = Resources.CarModel1;
+                        car = Resources.audi;
                         car.RotateFlip(RotateFlipType.Rotate270FlipNone);
                         break;
                     case Direction.NORTH:
-                        car = Resources.CarModel1;
+                        car = Resources.audi;
                         car.RotateFlip(RotateFlipType.Rotate180FlipNone);
                         break;
                     case Direction.SOUTH:
-                        car = Resources.CarModel1;
+                        car = Resources.audi;
                         break;
                     case Direction.WEST:
-                        car = Resources.CarModel1;
+                        car = Resources.audi;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if(type == 1)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.ford;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.ford;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.ford;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.ford;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if(type == 2)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.kamion;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.kamion;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.kamion;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.kamion;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if (type == 3)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.ambulanta;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.ambulanta;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.ambulanta;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.ambulanta;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if (type == 4)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.karavan;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.karavan;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.karavan;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.karavan;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if (type == 5)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.kola;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.kola;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.kola;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.kola;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if (type == 6)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.kombe;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.kombe;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.kombe;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.kombe;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if (type == 7)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.policija;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.policija;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.policija;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.policija;
+                        car.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        break;
+                }
+            }
+            else if (type == 8)
+            {
+                switch (dir)
+                {
+                    case Direction.EAST:
+                        car = Resources.taxi;
+                        car.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                        break;
+                    case Direction.NORTH:
+                        car = Resources.taxi;
+                        car.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                        break;
+                    case Direction.SOUTH:
+                        car = Resources.taxi;
+                        break;
+                    case Direction.WEST:
+                        car = Resources.taxi;
                         car.RotateFlip(RotateFlipType.Rotate90FlipNone);
                         break;
                 }
@@ -122,14 +290,14 @@ namespace TrafficLightsSimulationGame
                         else
                             isWaiting = false;
                     }
-                    if (X  < 690)
+                    if (X  < 820)
                         X -= velocity;
-                    else if (X - velocity <= 690 && !Green)
+                    else if (X - velocity <= 820 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((X - velocity <= 690 || velocity == 0) && Green)
+                    else if ((X - velocity <= 820 || velocity == 0) && Green)
                     {
                         velocity = 5;
                         X -= velocity;
@@ -151,14 +319,14 @@ namespace TrafficLightsSimulationGame
                         else
                             isWaiting = false;
                     }
-                    if (X + car.Size.Width > 405)
+                    if (X + car.Size.Width > 482)
                         X += velocity;
-                    else if (X + car.Size.Width + velocity >= 405 && !Green)
+                    else if (X + car.Size.Width + velocity >= 482 && !Green)
                     {
                         velocity = 0;
                         isWaiting = true;
                     }
-                    else if ((X + velocity >= 405 || velocity == 0) && Green)
+                    else if ((X + velocity >= 482 || velocity == 0) && Green)
                     {
                         velocity = 5;
                         X += velocity;
@@ -166,7 +334,7 @@ namespace TrafficLightsSimulationGame
                     }
                     else
                         X += velocity;
-                    if (X >= 1078)
+                    if (X >= 1283)
                         done = true;
                     break;
             }

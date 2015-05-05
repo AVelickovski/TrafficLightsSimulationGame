@@ -22,7 +22,7 @@ namespace TrafficLightsSimulationGame
             X = x;
             Y = y;
             isGreen = false;
-            semaphore = Resources.RedLight;
+            semaphore = Resources.isklucen;
         }
 
         public void draw(Graphics g)
@@ -41,9 +41,9 @@ namespace TrafficLightsSimulationGame
         {
             isGreen = !isGreen;
             if (isGreen)
-                semaphore = Resources.GreenLight;
+                semaphore = Resources.uklucen;
             else
-                semaphore = Resources.RedLight;
+                semaphore = Resources.isklucen;
         }
     }
 }

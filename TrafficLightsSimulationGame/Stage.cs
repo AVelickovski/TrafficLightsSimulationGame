@@ -22,35 +22,35 @@ namespace TrafficLightsSimulationGame
             collisionArea = new List<Vehicle>();
             Lights = new TrafficLights();
         }
-        public void add(int direction)
+        public void add(int direction, int type)
         {
             if(direction == 0)
             {
                 if (carsNorth.Count == 0)
-                    carsNorth.Add(new Vehicle(490, -30, 1, Vehicle.Direction.NORTH, null));
+                    carsNorth.Add(new Vehicle(580, -30, type, Vehicle.Direction.NORTH, null));
                 else
-                    carsNorth.Add(new Vehicle(490, -30, 1, Vehicle.Direction.NORTH, carsNorth[carsNorth.Count-1]));
+                    carsNorth.Add(new Vehicle(580, -30, type, Vehicle.Direction.NORTH, carsNorth[carsNorth.Count-1]));
             }
             else if(direction == 1)
             {
                 if (carsEast.Count == 0)
-                    carsEast.Add(new Vehicle(1108, 300, 1, Vehicle.Direction.EAST, null));
+                    carsEast.Add(new Vehicle(1313, 300, type, Vehicle.Direction.EAST, null));
                 else
-                    carsEast.Add(new Vehicle(1108, 300, 1, Vehicle.Direction.EAST, carsEast[carsEast.Count - 1]));
+                    carsEast.Add(new Vehicle(1313, 300, type, Vehicle.Direction.EAST, carsEast[carsEast.Count - 1]));
             }
             else if (direction == 2)
             {
                 if (carsWest.Count == 0)
-                    carsWest.Add(new Vehicle(-30, 377, 1, Vehicle.Direction.WEST, null));
+                    carsWest.Add(new Vehicle(-30, 380, type, Vehicle.Direction.WEST, null));
                 else
-                    carsWest.Add(new Vehicle(-30, 377, 1, Vehicle.Direction.WEST, carsWest[carsWest.Count - 1]));
+                    carsWest.Add(new Vehicle(-30, 380, type, Vehicle.Direction.WEST, carsWest[carsWest.Count - 1]));
             }
             else
             {
                 if (carsSouth.Count == 0)
-                    carsSouth.Add(new Vehicle(570, 668, 1, Vehicle.Direction.SOUTH, null));
+                    carsSouth.Add(new Vehicle(676, 678, type, Vehicle.Direction.SOUTH, null));
                 else
-                    carsSouth.Add(new Vehicle(570, 668, 1, Vehicle.Direction.SOUTH, carsSouth[carsSouth.Count - 1]));
+                    carsSouth.Add(new Vehicle(676, 678, type, Vehicle.Direction.SOUTH, carsSouth[carsSouth.Count - 1]));
             }
         }
 
@@ -140,12 +140,12 @@ namespace TrafficLightsSimulationGame
             {
                 if (collisionArea.IndexOf(c) != -1)
                 {
-                    if (c.X + c.getWidth() <= 472)
+                    if (c.X + c.getWidth() <= 560)
                         collisionArea.Remove(c);
                 }
                 else
                 {
-                    if (c.X <= 625 && c.X > 472)
+                    if (c.X <= 742 && c.X > 560)
                         collisionArea.Add(c);
                 }
             }
@@ -153,12 +153,12 @@ namespace TrafficLightsSimulationGame
             {
                 if (collisionArea.IndexOf(c) != -1)
                 {
-                    if (c.Y >= 431)
+                    if (c.Y >= 430)
                         collisionArea.Remove(c);
                 }
                 else
                 {
-                    if (c.Y + c.getHeight()>= 280 && c.Y < 431)
+                    if (c.Y + c.getHeight()>= 280 && c.Y < 430)
                         collisionArea.Add(c);
                 }
             }
@@ -166,12 +166,12 @@ namespace TrafficLightsSimulationGame
             {
                 if (collisionArea.IndexOf(c) != -1)
                 {
-                    if (c.X > 625)
+                    if (c.X > 742)
                         collisionArea.Remove(c);
                 }
                 else
                 {
-                    if (c.X + c.getWidth() >= 472 && c.X < 625)
+                    if (c.X + c.getWidth() >= 560 && c.X < 742)
                         collisionArea.Add(c);
                 }
             }
@@ -183,7 +183,7 @@ namespace TrafficLightsSimulationGame
                 }
                 else
                 {
-                    if (c.Y <= 431 && c.Y > 280 )
+                    if (c.Y <= 430 && c.Y > 280 )
                         collisionArea.Add(c);
                 }
                 
