@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
@@ -13,6 +14,7 @@ namespace TrafficLightsSimulationGame
         List<Vehicle> carsNorth, carsSouth, carsWest, carsEast;
         List<Vehicle> collisionArea;
         public TrafficLights Lights;
+        public SoundPlayer sudar;
         public Stage()
         {
             carsEast = new List<Vehicle>();
@@ -297,6 +299,8 @@ namespace TrafficLightsSimulationGame
         }
         public void drawBam(Point loc, Graphics g)
         {
+            sudar = new SoundPlayer(Resources.sudar);
+            sudar.Play();
             g.DrawImage(Resources.BAM, loc.X, loc.Y);
         }
     }
