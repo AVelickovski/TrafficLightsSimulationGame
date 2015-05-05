@@ -29,23 +29,23 @@ namespace TrafficLightsSimulationGame
             if(direction == 0)
             {
                 if (carsNorth.Count == 0)
-                    carsNorth.Add(new Vehicle(580, -30, type, Vehicle.Direction.NORTH, null));
+                    carsNorth.Add(new Vehicle(590, -60, type, Vehicle.Direction.NORTH, null));
                 else
-                    carsNorth.Add(new Vehicle(580, -30, type, Vehicle.Direction.NORTH, carsNorth[carsNorth.Count-1]));
+                    carsNorth.Add(new Vehicle(590, -60, type, Vehicle.Direction.NORTH, carsNorth[carsNorth.Count-1]));
             }
             else if(direction == 1)
             {
                 if (carsEast.Count == 0)
-                    carsEast.Add(new Vehicle(1313, 300, type, Vehicle.Direction.EAST, null));
+                    carsEast.Add(new Vehicle(1343, 300, type, Vehicle.Direction.EAST, null));
                 else
-                    carsEast.Add(new Vehicle(1313, 300, type, Vehicle.Direction.EAST, carsEast[carsEast.Count - 1]));
+                    carsEast.Add(new Vehicle(1343, 300, type, Vehicle.Direction.EAST, carsEast[carsEast.Count - 1]));
             }
             else if (direction == 2)
             {
                 if (carsWest.Count == 0)
-                    carsWest.Add(new Vehicle(-30, 380, type, Vehicle.Direction.WEST, null));
+                    carsWest.Add(new Vehicle(-60, 380, type, Vehicle.Direction.WEST, null));
                 else
-                    carsWest.Add(new Vehicle(-30, 380, type, Vehicle.Direction.WEST, carsWest[carsWest.Count - 1]));
+                    carsWest.Add(new Vehicle(-60, 380, type, Vehicle.Direction.WEST, carsWest[carsWest.Count - 1]));
             }
             else
             {
@@ -72,7 +72,7 @@ namespace TrafficLightsSimulationGame
         {
             if(carsNorth.Count != 0)
             {
-                if (carsNorth[0].Y > 595)
+                if (carsNorth[0].Y >= 648)
                 {
                     if(carsNorth.Count == 1)
                         carsNorth.RemoveAt(0);
@@ -86,7 +86,7 @@ namespace TrafficLightsSimulationGame
             }
             if (carsEast.Count != 0)
             {
-                if (carsEast[0].X + carsEast[0].getWidth()< 0)
+                if (carsEast[0].X + carsEast[0].getWidth()<= 0)
                 {
                     if (carsEast.Count == 1)
                         carsEast.RemoveAt(0);
@@ -99,7 +99,7 @@ namespace TrafficLightsSimulationGame
             }
             if (carsSouth.Count != 0)
             {
-                if (carsSouth[0].Y + carsSouth[0].getHeight() < 0)
+                if (carsSouth[0].Y + carsSouth[0].getHeight() <= 0)
                 {
                     if (carsSouth.Count == 1)
                         carsSouth.RemoveAt(0);
@@ -112,7 +112,7 @@ namespace TrafficLightsSimulationGame
             }
             if (carsWest.Count != 0)
             {
-                if (carsWest[0].X > 1353)
+                if (carsWest[0].X >= 1283)
                 {
                     if (carsWest.Count == 1)
                         carsWest.RemoveAt(0);
@@ -273,7 +273,7 @@ namespace TrafficLightsSimulationGame
                 if (c.isWaiting)
                     i++;
             }
-            if (i == 6)
+            if (i == 9)
                 return true;
             else
                 i = 0;
@@ -291,7 +291,7 @@ namespace TrafficLightsSimulationGame
                 if (c.isWaiting)
                     i++;
             }
-            if (i == 8)
+            if (i == 9)
                 return true;
             else
                 i = 0;

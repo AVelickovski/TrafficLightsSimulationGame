@@ -26,7 +26,7 @@ namespace TrafficLightsSimulationGame
             X = x;
             Y = y;
             done = false;
-            velocity = 6;
+            velocity = 8;
             dir = d;
         }
         public abstract void draw(Graphics g);
