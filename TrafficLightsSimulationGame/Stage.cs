@@ -76,7 +76,7 @@ namespace TrafficLightsSimulationGame
                         manNorth.Add(new Man(750, -10, type, ObjectType.Direction.WEST, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
                         manNorth.Add(new Man(531, -10, type, ObjectType.Direction.SOUTH, ObjectType.Direction.NORTH, pointFrom, pointTo));
-                    else if (to == 0 && pointFrom == 1)
+                    else if (to == 1 && pointFrom == 1)
                         manNorth.Add(new Man(750, -10, type, ObjectType.Direction.SOUTH, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
                         manNorth.Add(new Man(531, -10, type, ObjectType.Direction.EAST, ObjectType.Direction.NORTH, pointFrom, pointTo));
@@ -90,7 +90,7 @@ namespace TrafficLightsSimulationGame
                         manNorth.Add(new Man(1293, 444, type, ObjectType.Direction.WEST, ObjectType.Direction.EAST, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
                         manNorth.Add(new Man(1293, 250, type, ObjectType.Direction.SOUTH, ObjectType.Direction.EAST, pointFrom, pointTo));
-                    else if (to == 0 && pointFrom == 1)
+                    else if (to == 1 && pointFrom == 1)
                         manNorth.Add(new Man(1293, 444, type, ObjectType.Direction.SOUTH, ObjectType.Direction.EAST, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
                         manNorth.Add(new Man(1293, 250, type, ObjectType.Direction.NORTH, ObjectType.Direction.EAST, pointFrom, pointTo));
@@ -104,7 +104,7 @@ namespace TrafficLightsSimulationGame
                         manNorth.Add(new Man(531, 658, type, ObjectType.Direction.WEST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
                         manNorth.Add(new Man(750, 658, type, ObjectType.Direction.NORTH, ObjectType.Direction.SOUTH, pointFrom, pointTo));
-                    else if (to == 0 && pointFrom == 1)
+                    else if (to == 1 && pointFrom == 1)
                         manNorth.Add(new Man(531, 658, type, ObjectType.Direction.NORTH, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
                         manNorth.Add(new Man(750, 658, type, ObjectType.Direction.EAST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
@@ -118,7 +118,7 @@ namespace TrafficLightsSimulationGame
                         manNorth.Add(new Man(-10, 250, type, ObjectType.Direction.NORTH, ObjectType.Direction.WEST, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
                         manNorth.Add(new Man(-10, 444, type, ObjectType.Direction.SOUTH, ObjectType.Direction.WEST, pointFrom, pointTo));
-                    else if (to == 0 && pointFrom == 1)
+                    else if (to == 1 && pointFrom == 1)
                         manNorth.Add(new Man(-10, 250, type, ObjectType.Direction.SOUTH, ObjectType.Direction.WEST, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
                         manNorth.Add(new Man(-10, 444, type, ObjectType.Direction.EAST, ObjectType.Direction.WEST, pointFrom, pointTo));
