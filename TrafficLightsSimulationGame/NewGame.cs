@@ -154,7 +154,6 @@ namespace TrafficLightsSimulationGame
 
         private void NewGame_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
