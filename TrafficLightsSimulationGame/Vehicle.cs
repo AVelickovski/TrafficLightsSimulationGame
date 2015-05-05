@@ -210,7 +210,10 @@ namespace TrafficLightsSimulationGame
 
         public override void draw(Graphics g)
         {
-            g.DrawImageUnscaled(car, new Rectangle(X,Y,31,60));
+            g.DrawImageUnscaledAndClipped(car, new Rectangle(X,Y,31,60));
+
+            //Image image = (Bitmap)car.Clone();
+            //g.DrawImage(image, X, Y, image.Width, image.Height);
         }
         public int getWidth()
         {
