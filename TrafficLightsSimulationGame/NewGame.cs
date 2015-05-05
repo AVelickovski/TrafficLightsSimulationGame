@@ -108,7 +108,7 @@ namespace TrafficLightsSimulationGame
 
         private void Timer2_Tick(object sender, EventArgs e)
         {
-            stage.add(rnd.Next(4), rnd.Next(9));
+            stage.add(rnd.Next(4), rnd.Next(8));
             if(stage.checkJam())
             {
                 timer1.Stop();
