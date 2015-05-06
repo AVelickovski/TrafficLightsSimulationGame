@@ -12,7 +12,7 @@ namespace TrafficLightsSimulationGame
     public class Stage
     {
         List<Vehicle> carsNorth, carsSouth, carsWest, carsEast;
-        List<Man> manNorth, manSouth, manWest, manEast;
+        List<Man> manList;
         List<Vehicle> collisionAreaCars;
         List<ObjectType> collisionNorth, collisionSouth, collisionWest, collisionEast;
         public TrafficLights Lights;
@@ -23,10 +23,7 @@ namespace TrafficLightsSimulationGame
             carsNorth = new List<Vehicle>();
             carsWest = new List<Vehicle>();
             carsSouth = new List<Vehicle>();
-            manEast = new List<Man>();
-            manNorth = new List<Man>();
-            manSouth = new List<Man>();
-            manWest = new List<Man>();
+            manList = new List<Man>();
             collisionNorth = new List<ObjectType>();
             collisionSouth = new List<ObjectType>();
             collisionWest = new List<ObjectType>();
@@ -71,59 +68,59 @@ namespace TrafficLightsSimulationGame
             {
                 case 0:
                     if (to == 0 && pointFrom == 0)
-                        manNorth.Add(new Man(531, -10,type, ObjectType.Direction.WEST, ObjectType.Direction.NORTH, pointFrom, pointTo));
+                        manList.Add(new Man(531, -10,type, ObjectType.Direction.WEST, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     else if(to == 0 && pointFrom == 1)
-                        manNorth.Add(new Man(755, -10, type, ObjectType.Direction.WEST, ObjectType.Direction.NORTH, pointFrom, pointTo));
+                        manList.Add(new Man(755, -10, type, ObjectType.Direction.WEST, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
-                        manNorth.Add(new Man(531, -10, type, ObjectType.Direction.SOUTH, ObjectType.Direction.NORTH, pointFrom, pointTo));
+                        manList.Add(new Man(531, -10, type, ObjectType.Direction.SOUTH, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     else if (to == 1 && pointFrom == 1)
-                        manNorth.Add(new Man(755, -10, type, ObjectType.Direction.SOUTH, ObjectType.Direction.NORTH, pointFrom, pointTo));
+                        manList.Add(new Man(755, -10, type, ObjectType.Direction.SOUTH, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
-                        manNorth.Add(new Man(531, -10, type, ObjectType.Direction.EAST, ObjectType.Direction.NORTH, pointFrom, pointTo));
+                        manList.Add(new Man(531, -10, type, ObjectType.Direction.EAST, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     else if (to == 2 && pointFrom == 1)
-                        manNorth.Add(new Man(755, -10, type, ObjectType.Direction.EAST, ObjectType.Direction.NORTH, pointFrom, pointTo));
+                        manList.Add(new Man(755, -10, type, ObjectType.Direction.EAST, ObjectType.Direction.NORTH, pointFrom, pointTo));
                     break;
                 case 1:
                     if (to == 0 && pointFrom == 0)
-                        manEast.Add(new Man(1293, 247, type, ObjectType.Direction.WEST, ObjectType.Direction.EAST, pointFrom, pointTo));
+                        manList.Add(new Man(1293, 247, type, ObjectType.Direction.WEST, ObjectType.Direction.EAST, pointFrom, pointTo));
                     else if (to == 0 && pointFrom == 1)
-                        manEast.Add(new Man(1293, 444, type, ObjectType.Direction.WEST, ObjectType.Direction.EAST, pointFrom, pointTo));
+                        manList.Add(new Man(1293, 444, type, ObjectType.Direction.WEST, ObjectType.Direction.EAST, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
-                        manNorth.Add(new Man(1293, 247, type, ObjectType.Direction.SOUTH, ObjectType.Direction.EAST, pointFrom, pointTo));
+                        manList.Add(new Man(1293, 247, type, ObjectType.Direction.SOUTH, ObjectType.Direction.EAST, pointFrom, pointTo));
                     else if (to == 1 && pointFrom == 1)
-                        manEast.Add(new Man(1293, 444, type, ObjectType.Direction.SOUTH, ObjectType.Direction.EAST, pointFrom, pointTo));
+                        manList.Add(new Man(1293, 444, type, ObjectType.Direction.SOUTH, ObjectType.Direction.EAST, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
-                        manEast.Add(new Man(1293, 247, type, ObjectType.Direction.NORTH, ObjectType.Direction.EAST, pointFrom, pointTo));
+                        manList.Add(new Man(1293, 247, type, ObjectType.Direction.NORTH, ObjectType.Direction.EAST, pointFrom, pointTo));
                     else if (to == 2 && pointFrom == 1)
-                        manEast.Add(new Man(1293, 444, type, ObjectType.Direction.NORTH, ObjectType.Direction.EAST, pointFrom, pointTo));
+                        manList.Add(new Man(1293, 444, type, ObjectType.Direction.NORTH, ObjectType.Direction.EAST, pointFrom, pointTo));
                     break;
                 case 2:
                     if (to == 0 && pointFrom == 0)
-                        manSouth.Add(new Man(755, 658, type, ObjectType.Direction.WEST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
+                        manList.Add(new Man(755, 658, type, ObjectType.Direction.WEST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     else if (to == 0 && pointFrom == 1)
-                        manSouth.Add(new Man(531, 658, type, ObjectType.Direction.WEST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
+                        manList.Add(new Man(531, 658, type, ObjectType.Direction.WEST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
-                        manSouth.Add(new Man(755, 658, type, ObjectType.Direction.NORTH, ObjectType.Direction.SOUTH, pointFrom, pointTo));
+                        manList.Add(new Man(755, 658, type, ObjectType.Direction.NORTH, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     else if (to == 1 && pointFrom == 1)
-                        manSouth.Add(new Man(531, 658, type, ObjectType.Direction.NORTH, ObjectType.Direction.SOUTH, pointFrom, pointTo));
+                        manList.Add(new Man(531, 658, type, ObjectType.Direction.NORTH, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
-                        manSouth.Add(new Man(755, 658, type, ObjectType.Direction.EAST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
+                        manList.Add(new Man(755, 658, type, ObjectType.Direction.EAST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     else if (to == 2 && pointFrom == 1)
-                        manSouth.Add(new Man(531, 658, type, ObjectType.Direction.EAST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
+                        manList.Add(new Man(531, 658, type, ObjectType.Direction.EAST, ObjectType.Direction.SOUTH, pointFrom, pointTo));
                     break;
                 case 3:
                     if (to == 0 && pointFrom == 0)
-                        manWest.Add(new Man(-10, 444, type, ObjectType.Direction.NORTH, ObjectType.Direction.WEST, pointFrom, pointTo));
+                        manList.Add(new Man(-10, 444, type, ObjectType.Direction.NORTH, ObjectType.Direction.WEST, pointFrom, pointTo));
                     else if (to == 0 && pointFrom == 1)
-                        manWest.Add(new Man(-10, 247, type, ObjectType.Direction.NORTH, ObjectType.Direction.WEST, pointFrom, pointTo));
+                        manList.Add(new Man(-10, 247, type, ObjectType.Direction.NORTH, ObjectType.Direction.WEST, pointFrom, pointTo));
                     if (to == 1 && pointFrom == 0)
-                        manWest.Add(new Man(-10, 444, type, ObjectType.Direction.SOUTH, ObjectType.Direction.WEST, pointFrom, pointTo));
+                        manList.Add(new Man(-10, 444, type, ObjectType.Direction.SOUTH, ObjectType.Direction.WEST, pointFrom, pointTo));
                     else if (to == 1 && pointFrom == 1)
-                        manWest.Add(new Man(-10, 247, type, ObjectType.Direction.SOUTH, ObjectType.Direction.WEST, pointFrom, pointTo));
+                        manList.Add(new Man(-10, 247, type, ObjectType.Direction.SOUTH, ObjectType.Direction.WEST, pointFrom, pointTo));
                     if (to == 2 && pointFrom == 0)
-                        manWest.Add(new Man(-10, 444, type, ObjectType.Direction.EAST, ObjectType.Direction.WEST, pointFrom, pointTo));
+                        manList.Add(new Man(-10, 444, type, ObjectType.Direction.EAST, ObjectType.Direction.WEST, pointFrom, pointTo));
                     else if (to == 2 && pointFrom == 1)
-                        manWest.Add(new Man(-10, 247, type, ObjectType.Direction.EAST, ObjectType.Direction.WEST, pointFrom, pointTo));
+                        manList.Add(new Man(-10, 247, type, ObjectType.Direction.EAST, ObjectType.Direction.WEST, pointFrom, pointTo));
                     break;
             }
         }
@@ -138,17 +135,11 @@ namespace TrafficLightsSimulationGame
                 c.draw(g);
             foreach (Vehicle c in carsSouth)
                 c.draw(g);
-            foreach (Man m in manNorth)
-                m.draw(g);
-            foreach(Man m in manEast)
-                m.draw(g);
-            foreach (Man m in manSouth)
-                m.draw(g);
-            foreach (Man m in manWest)
+            foreach (Man m in manList)
                 m.draw(g);
             Lights.Draw(g);
         }
-        private void removeCar()
+        private void removeCarAndMan()
         {
             if(carsNorth.Count != 0)
             {
@@ -203,21 +194,11 @@ namespace TrafficLightsSimulationGame
                     }
                 }
             }
-        }
-        private void removeMan()
-        {
-            if (manEast.Count != 0)
-                if (manEast[0].done)
-                    manEast.RemoveAt(0);
-            if(manNorth.Count !=0)
-                if (manNorth[0].done)
-                    manNorth.RemoveAt(0);
-            if(manSouth.Count != 0)
-                if (manSouth[0].done)
-                    manSouth.RemoveAt(0);
-            if(manWest.Count != 0)
-                if (manWest[0].done)
-                    manWest.RemoveAt(0);
+            if(manList.Count != 0)
+            {
+                if (manList[0].done)
+                    manList.RemoveAt(0);
+            }
         }
         public void move()
         {
@@ -229,22 +210,15 @@ namespace TrafficLightsSimulationGame
                 c.move(Lights.Lights[2].isGreen);
             foreach (Vehicle c in carsSouth)
                 c.move(Lights.Lights[3].isGreen);
-            foreach (Man m in manNorth)
+            foreach (Man m in manList)
                 m.move();
-            foreach (Man m in manEast)
-                m.move();
-            foreach (Man m in manSouth)
-                m.move();
-            foreach (Man m in manWest)
-                m.move();
-            removeCar();
-            removeMan();
+            removeCarAndMan();
         }
         public void inCollisionArea()
         {
             foreach (Vehicle c in carsEast)
             {
-                if (collisionAreaCars.IndexOf(c) != -1)
+                if (collisionAreaCars.Contains(c))
                 {
                     if (c.X + c.getWidth() <= 560)
                         collisionAreaCars.Remove(c);
@@ -254,23 +228,63 @@ namespace TrafficLightsSimulationGame
                     if (c.X <= 742 && c.X > 560)
                         collisionAreaCars.Add(c);
                 }
+                if (collisionEast.Contains(c))
+                {
+                    if (c.X + c.getWidth() <= 740)
+                        collisionEast.Remove(c);
+                }
+                else
+                {
+                    if (c.X <= 820 && c.X > 740)
+                        collisionEast.Add(c);
+                }
+                if (collisionWest.Contains(c))
+                {
+                    if (c.X + c.getWidth() <= 482)
+                        collisionWest.Remove(c);
+                }
+                else
+                {
+                    if (c.X <= 560 && c.X > 482)
+                        collisionWest.Add(c);
+                }
             }
             foreach (Vehicle c in carsNorth)
             {
-                if (collisionAreaCars.IndexOf(c) != -1)
+                if (collisionAreaCars.Contains(c))
                 {
                     if (c.Y >= 430)
                         collisionAreaCars.Remove(c);
                 }
                 else
                 {
-                    if (c.Y + c.getHeight()>= 280 && c.Y < 430)
+                    if (c.Y + c.getHeight() >= 280 && c.Y < 430)
                         collisionAreaCars.Add(c);
+                }
+                if (collisionNorth.Contains(c))
+                {
+                    if (c.Y >= 280)
+                        collisionNorth.Remove(c);
+                }
+                else
+                {
+                    if (c.Y >= 215 && c.Y < 280)
+                        collisionNorth.Add(c);
+                }
+                if (collisionSouth.Contains(c))
+                {
+                    if (c.Y >= 498)
+                        collisionSouth.Remove(c);
+                }
+                else
+                {
+                    if (c.Y + c.getHeight() >= 560 && c.Y < 482)
+                        collisionSouth.Add(c);
                 }
             }
            foreach (Vehicle c in carsWest)
             {
-                if (collisionAreaCars.IndexOf(c) != -1)
+                if (collisionAreaCars.Contains(c))
                 {
                     if (c.X > 742)
                         collisionAreaCars.Remove(c);
@@ -280,21 +294,124 @@ namespace TrafficLightsSimulationGame
                     if (c.X + c.getWidth() >= 560 && c.X < 742)
                         collisionAreaCars.Add(c);
                 }
+                if (collisionWest.Contains(c))
+                {
+                    if (c.X >= 560)
+                        collisionWest.Remove(c);
+                }
+                else
+                {
+                    if (c.X + c.getWidth() >= 482  && c.X < 560)
+                        collisionWest.Add(c);
+                }
+                if (collisionEast.Contains(c))
+                {
+                    if (c.X >= 820)
+                        collisionEast.Remove(c);
+                }
+                else
+                {
+                    if (c.X + c.getWidth() >= 740 && c.X < 820)
+                        collisionEast.Add(c);
+                }
             }
             foreach (Vehicle c in carsSouth)
-                if (collisionAreaCars.IndexOf(c) != -1)
+            {
+                if (collisionAreaCars.Contains(c))
                 {
                     if (c.Y + c.getHeight() <= 280)
                         collisionAreaCars.Remove(c);
                 }
                 else
                 {
-                    if (c.Y <= 430 && c.Y > 280 )
+                    if (c.Y <= 430 && c.Y > 280)
                         collisionAreaCars.Add(c);
                 }
+                if (collisionSouth.Contains(c))
+                {
+                    if (c.Y + c.getHeight() <= 431)
+                        collisionSouth.Remove(c);
+                }
+                else
+                {
+                    if (c.Y <=498 && c.Y > 431)
+                        collisionSouth.Add(c);
+                }
+                if (collisionNorth.Contains(c))
+                {
+                    if (c.Y + c.getHeight() <= 215)
+                        collisionNorth.Remove(c);
+                }
+                else
+                {
+                    if (c.Y <= 280 && c.Y > 215)
+                        collisionNorth.Add(c);
+                }
+            }
+            foreach(Man m in manList)
+            {
+                if (collisionNorth.Contains(m))
+                {
+                    if (m.X + m.getWidth() / 2 <= 560 || m.X + m.getWidth() / 2 >= 740)
+                        collisionNorth.Remove(m);
+                    continue;
+                }
+                else
+                {
+                    if (m.X + m.getWidth() / 2 >= 560 && m.X + m.getWidth() / 2 < 740 && m.Y + m.getHeight() / 2 > 215 && m.Y + m.getHeight() / 2 < 280)
+                    {
+                        collisionNorth.Add(m);
+                        continue;
+                    }
+                        
+                }
+                if (collisionEast.Contains(m))
+                {
+                    if (m.Y + m.getHeight() / 2 <= 280 || m.Y + m.getHeight() / 2 >= 431)
+                        collisionEast.Remove(m);
+                    continue;
+                }
+                else
+                {
+                    if (m.X + m.getWidth() / 2 >= 740 && m.X + m.getWidth() / 2 < 820 && m.Y + m.getHeight() / 2 > 280 && m.Y + m.getHeight() / 2 < 431)
+                    {
+                        collisionEast.Add(m);
+                        continue;
+                    }
+                        
+                }
+                if (collisionSouth.Contains(m))
+                {
+                    if (m.X + m.getWidth() / 2 <= 560 || m.X + m.getWidth() / 2 >= 740)
+                        collisionNorth.Remove(m);
+                }
+                else
+                {
+                    if (m.X + m.getWidth() / 2 >= 560 && m.X + m.getWidth() / 2 < 740 && m.Y + m.getHeight() / 2 > 431 && m.Y + m.getHeight() / 2 < 498)
+                    {
+                        collisionSouth.Add(m);
+                        continue;
+                    }
+                }
+                if (collisionWest.Contains(m))
+                {
+                    if (m.Y + m.getHeight() / 2 <= 280 || m.Y + m.getHeight() / 2 >= 431)
+                        collisionWest.Remove(m);
+                    continue;
+                }
+                else
+                {
+                    if (m.X + m.getWidth() / 2 >= 482 && m.X + m.getWidth() / 2 < 560 && m.Y + m.getHeight() / 2 > 280 && m.Y + m.getHeight() / 2 < 431)
+                    {
+                        collisionWest.Add(m);
+                        continue;
+                    }
+
+                }
+            }
                 
         }
-        public Point checkCollision()
+        public Point checkCollisionCars()
         {
             foreach(Vehicle c in collisionAreaCars)
             {
@@ -357,6 +474,66 @@ namespace TrafficLightsSimulationGame
                         }
                     }
                 }
+            }
+            return Point.Empty;
+        }
+        public Point checkCollisionMan()
+        {
+            foreach(ObjectType v in collisionNorth)
+            {
+                if(v is Vehicle)
+                foreach(ObjectType m in collisionNorth)
+                {
+                        if (m is Man)
+                        {
+                            if ((m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                            else if ((m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                        }
+                }
+            }
+            foreach (ObjectType v in collisionEast)
+            {
+                if (v is Vehicle)
+                    foreach (ObjectType m in collisionEast)
+                    {
+                        if (m is Man)
+                        {
+                            if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y - 10 <= v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 <= v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                            else if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                        }
+                    }
+            }
+            foreach (ObjectType v in collisionSouth)
+            {
+                if (v is Vehicle)
+                    foreach (ObjectType m in collisionSouth)
+                    {
+                        if (m is Man)
+                        {
+                            if ((m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                            else if ((m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                        }
+                    }
+            }
+            foreach (ObjectType v in collisionWest)
+            {
+                if (v is Vehicle)
+                    foreach (ObjectType m in collisionWest)
+                    {
+                        if (m is Man)
+                        {
+                            if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y - 10 <= v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 <= v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                            else if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                                return new Point(m.X - 10, m.Y - 10);
+                        }
+                    }
             }
             return Point.Empty;
         }

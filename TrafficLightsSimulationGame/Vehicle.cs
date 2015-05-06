@@ -191,15 +191,6 @@ namespace TrafficLightsSimulationGame
             Image image = (Bitmap)Model.Clone();
             g.DrawImage(image, X, Y, image.Width, image.Height);
         }
-        public int getWidth()
-        {
-            return Model.Size.Width;
-        }
-        public int getHeight()
-        {
-            return Model.Size.Height;
-        }
-
         public void move(bool Green)
         {
             switch (dir)

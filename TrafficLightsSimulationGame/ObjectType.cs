@@ -33,5 +33,13 @@ namespace TrafficLightsSimulationGame
             Model = null;
         }
         public abstract void draw(Graphics g);
+        public int getHeight()
+        {
+            return Model.Size.Height;
+        }
+        public int getWidth()
+        {
+            return Model.Size.Width;
+        }
     }
 }

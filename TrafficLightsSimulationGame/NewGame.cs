@@ -17,7 +17,7 @@ namespace TrafficLightsSimulationGame
         Image background;
         Stage stage;
         Random rnd;
-        Point p;
+        Point pCars,pMan;
         Timer timer1, timer2,timer3,timer4;
         public SoundPlayer kopce;
 
@@ -27,7 +27,7 @@ namespace TrafficLightsSimulationGame
             background = Resources.PlayGround;
             stage = new Stage();
             Width = background.Size.Width;
-            Height = background.Size.Height + 10;
+            Height = background.Size.Height;
             DoubleBuffered = true;
             rnd = new Random();
             timer4 = new Timer();
@@ -37,13 +37,13 @@ namespace TrafficLightsSimulationGame
             timer3.Tick += new EventHandler(Timer3_Tick);
             timer3.Interval = 2000;
             timer2 = new Timer();
-            timer2.Interval = 2000;
+            timer2.Interval = 1500;
             timer2.Tick += new EventHandler(Timer2_Tick); 
             timer1 = new Timer();
             timer1.Interval = 50;
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
-           // timer2.Start();
+            timer2.Start();
             timer4.Start();
         }
 
@@ -70,15 +70,25 @@ namespace TrafficLightsSimulationGame
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            p = stage.checkCollision();
-            if (!p.IsEmpty)
+            pCars = stage.checkCollisionCars();
+            pMan = stage.checkCollisionMan();
+            if (!pCars.IsEmpty)
             {
                 timer1.Stop();
                 timer2.Stop();
                 timer4.Stop();
-                Graphics g = CreateGraphics();
-                stage.drawBam(p, g);
                 timer3.Start();
+                Graphics g = CreateGraphics();
+                stage.drawBam(pCars, g);
+            }
+            else if (!pMan.IsEmpty)
+            {
+                timer1.Stop();
+                timer2.Stop();
+                timer4.Stop();
+                timer3.Start();
+                Graphics g = CreateGraphics();
+                g.DrawImage(Resources.tomato,pMan);
             }
             else
             {
@@ -130,7 +140,6 @@ namespace TrafficLightsSimulationGame
 
         private void NewGame_MouseMove(object sender, MouseEventArgs e)
         {
-            toolStripStatusLabel1.Text = String.Format("X: {0}, Y: {1}",e.Location.X, e.Location.Y);
             if(e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
             {
                 this.Cursor = Cursors.Hand;
