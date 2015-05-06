@@ -43,7 +43,7 @@ namespace TrafficLightsSimulationGame
             timer1.Interval = 50;
             timer1.Tick += new EventHandler(Timer1_Tick);
             timer1.Start();
-            timer2.Start();
+           // timer2.Start();
             timer4.Start();
         }
 
@@ -93,6 +93,13 @@ namespace TrafficLightsSimulationGame
             e.Graphics.Clear(Color.White);
             e.Graphics.DrawImage(background, 0, 0);
             stage.Draw(e.Graphics);
+        }
+
+        private void NewGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer1.Stop();
+            timer2.Stop();
+            timer4.Stop();
         }
 
         private void NewGame_MouseClick(object sender, MouseEventArgs e)

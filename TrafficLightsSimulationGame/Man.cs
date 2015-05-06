@@ -83,16 +83,61 @@ namespace TrafficLightsSimulationGame
         {
             g.DrawImage(Model, X, Y);
         }
-        private void flipModel(int degrees)
+        private void flipModelUp()
         {
             if (!flip)
             {
-                if (degrees == 90)
-                    Model.RotateFlip(RotateFlipType.Rotate90FlipNone);
-                if (degrees == 270)
-                    Model.RotateFlip(RotateFlipType.Rotate270FlipNone);
+                if (type == 0)
+                    Model = Resources.covek_gore;
+                if (type == 1)
+                    Model = Resources.dete_gore;
+                if (type == 2)
+                    Model = Resources.starce_gore;
                 flip = true;
             }
+            
+        }
+        private void flipModelDown()
+        {
+            if (!flip)
+            {
+                if (type == 0)
+                    Model = Resources.covek_dole;
+                if (type == 1)
+                    Model = Resources.dete_dole;
+                if (type == 2)
+                    Model = Resources.starce_dole;
+                flip = true;
+            }
+
+        }
+        private void flipModelLeft()
+        {
+            if (!flip)
+            {
+                if (type == 0)
+                    Model = Resources.covek_levo;
+                if (type == 1)
+                    Model = Resources.dete_levo;
+                if (type == 2)
+                    Model = Resources.starce_levo;
+                flip = true;
+            }
+
+        }
+        private void flipModelRight()
+        {
+            if (!flip)
+            {
+                if (type == 0)
+                    Model = Resources.covek_desno;
+                if (type == 1)
+                    Model = Resources.dete_desno;
+                if (type == 2)
+                    Model = Resources.starce_desno;
+                flip = true;
+            }
+
         }
         public void move()
         {
@@ -104,7 +149,7 @@ namespace TrafficLightsSimulationGame
                         case Direction.WEST:
                             if(pointFrom == 0 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 >= 265 && X == 531)
+                                if (Y + Model.Size.Height / 2 >= 247 && X == 531)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -114,7 +159,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 265 && X < 531)
+                                else if (Y + Model.Size.Height / 2 >= 247 && X < 531)
                                     X -= velocity;
                                 else
                                     Y += velocity;
@@ -142,7 +187,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 >= 444 && X == 750)
+                                if (Y + Model.Size.Height / 2 >= 444 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -152,7 +197,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 444 && X < 750)
+                                else if (Y + Model.Size.Height / 2 >= 444 && X < 755)
                                     X -= velocity;
                                 else
                                     Y += velocity;
@@ -161,7 +206,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 >= 265 && X == 750)
+                                if (Y + Model.Size.Height / 2 >= 247 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -171,7 +216,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 265 && X < 750)
+                                else if (Y + Model.Size.Height / 2 >= 247 && X < 755)
                                     X -= velocity;
                                 else
                                     Y += velocity;
@@ -201,7 +246,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 >= 265 && X == 531)
+                                if (Y + Model.Size.Height / 2 >= 247 && X == 531)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -211,7 +256,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 265 && X > 531)
+                                else if (Y + Model.Size.Height / 2 >= 247 && X > 531)
                                     X += velocity;
                                 else
                                     Y += velocity;
@@ -220,7 +265,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 >= 265 && X == 750)
+                                if (Y + Model.Size.Height / 2 >= 247 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -230,7 +275,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 265 && X > 750)
+                                else if (Y + Model.Size.Height / 2 >= 247 && X > 755)
                                     X += velocity;
                                 else
                                     Y += velocity;
@@ -239,7 +284,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 >= 444 && X == 750)
+                                if (Y + Model.Size.Height / 2 >= 444 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -249,7 +294,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 444 && X > 750)
+                                else if (Y + Model.Size.Height / 2 >= 444 && X > 755)
                                     X += velocity;
                                 else
                                     Y += velocity;
@@ -276,11 +321,11 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 >= 444 && X + Model.Size.Width / 2 < 750)
+                                else if (Y + Model.Size.Height / 2 >= 444 && X + Model.Size.Width / 2 < 755)
                                     X += velocity;
-                                else if (X + Model.Size.Width / 2 >= 750)
+                                else if (X + Model.Size.Width / 2 >= 755)
                                 {
-                                    flipModel(90);
+                                    flipModelDown();
                                     Y += velocity;
                                 }
                                 else
@@ -296,7 +341,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 >= 444 && X == 750)
+                                if (Y + Model.Size.Height / 2 >= 444 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -310,7 +355,7 @@ namespace TrafficLightsSimulationGame
                                     X -= velocity;
                                 else if (X + Model.Size.Width / 2 <= 531)
                                 {
-                                    flipModel(270);
+                                    flipModelDown();
                                     Y += velocity;
                                 }
                                 else
@@ -333,7 +378,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 <= 540 && Y == 250)
+                                if (X + Model.Size.Width / 2 <= 540 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -347,7 +392,7 @@ namespace TrafficLightsSimulationGame
                                     Y += velocity;
                                 else if (Y + Model.Size.Height / 2 >= 444)
                                 {
-                                    flipModel(90);
+                                    flipModelLeft();
                                     X -= velocity;
                                 }
                                 else
@@ -373,11 +418,11 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 540 && Y > 250)
+                                else if (X + Model.Size.Width / 2 <= 540 && Y > 247)
                                     Y -= velocity;
                                 else if (Y + Model.Size.Height / 2 <= 444)
                                 {
-                                    flipModel(270);
+                                    flipModelLeft();
                                     X -= velocity;
                                 }
                                 else
@@ -389,7 +434,7 @@ namespace TrafficLightsSimulationGame
                         case Direction.NORTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 <= 750 && Y == 250)
+                                if (X + Model.Size.Width / 2 <= 755 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -399,7 +444,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 750 && Y < 250)
+                                else if (X + Model.Size.Width / 2 <= 755 && Y < 247)
                                     Y -= velocity;
                                 else
                                     X -= velocity;
@@ -408,7 +453,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 <= 540 && Y == 250)
+                                if (X + Model.Size.Width / 2 <= 540 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -418,7 +463,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 540 && Y < 250)
+                                else if (X + Model.Size.Width / 2 <= 540 && Y < 247)
                                     Y -= velocity;
                                 else
                                     X -= velocity;
@@ -446,7 +491,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 <= 750 && Y == 444)
+                                if (X + Model.Size.Width / 2 <= 755 && Y == 444)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -456,7 +501,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 750 && Y < 444)
+                                else if (X + Model.Size.Width / 2 <= 755 && Y < 444)
                                     Y -= velocity;
                                 else
                                     X -= velocity;
@@ -467,7 +512,7 @@ namespace TrafficLightsSimulationGame
                         case Direction.SOUTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 <= 540 && Y == 250)
+                                if (X + Model.Size.Width / 2 <= 540 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -477,7 +522,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 540 && Y > 250)
+                                else if (X + Model.Size.Width / 2 <= 540 && Y > 247)
                                     Y += velocity;
                                 else
                                     X -= velocity;
@@ -486,7 +531,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 <= 750 && Y == 250)
+                                if (X + Model.Size.Width / 2 <= 755 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -496,7 +541,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 750 && Y > 250)
+                                else if (X + Model.Size.Width / 2 <= 755 && Y > 247)
                                     Y += velocity;
                                 else
                                     X -= velocity;
@@ -505,7 +550,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 <= 750 && Y == 444)
+                                if (X + Model.Size.Width / 2 <= 755 && Y == 444)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -515,7 +560,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 <= 750 && Y > 444)
+                                else if (X + Model.Size.Width / 2 <= 755 && Y > 444)
                                     Y += velocity;
                                 else
                                     X -= velocity;
@@ -556,7 +601,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 >= 750 && Y == 444)
+                                if (X + Model.Size.Width / 2 >= 755 && Y == 444)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -566,11 +611,11 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 750 && Y > 250)
+                                else if (X + Model.Size.Width / 2 >= 755 && Y > 247)
                                     Y -= velocity;
-                                else if (Y + Model.Size.Height / 2 <= 250)
+                                else if (Y <= 247)
                                 {
-                                    flipModel(90);
+                                    flipModelRight();
                                     X += velocity;
                                 }
                                 else
@@ -586,7 +631,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 >= 750 && Y == 250)
+                                if (X + Model.Size.Width / 2 >= 755 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -596,15 +641,15 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 750 && Y < 444)
-                                    Y -= velocity;
+                                else if (X + Model.Size.Width / 2 >= 755 && Y < 444)
+                                    Y += velocity;
                                 else if (Y + Model.Size.Height / 2 >= 444)
                                 {
-                                    flipModel(270);
+                                    flipModelRight();
                                     X += velocity;
                                 }
                                 else
-                                    X -= velocity;
+                                    X += velocity;
                                 if (X >= 1283)
                                     done = true;
                             }
@@ -612,7 +657,7 @@ namespace TrafficLightsSimulationGame
                         case Direction.NORTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 >= 750 && Y == 444)
+                                if (X + Model.Size.Width / 2 >= 755 && Y == 444)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -622,7 +667,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 750 && Y < 444)
+                                else if (X + Model.Size.Width / 2 >= 755 && Y < 444)
                                     Y -= velocity;
                                 else
                                     X += velocity;
@@ -650,7 +695,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 >= 540 && Y == 250)
+                                if (X + Model.Size.Width / 2 >= 540 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -660,7 +705,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 540 && Y < 250)
+                                else if (X + Model.Size.Width / 2 >= 540 && Y < 247)
                                     Y -= velocity;
                                 else
                                     X += velocity;
@@ -669,7 +714,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 >= 750 && Y == 250)
+                                if (X + Model.Size.Width / 2 >= 755 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_gore;
@@ -679,7 +724,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_gore;
                                     Y -= velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 750 && Y < 250)
+                                else if (X + Model.Size.Width / 2 >= 755 && Y < 247)
                                     Y -= velocity;
                                 else
                                     X += velocity;
@@ -709,7 +754,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 >= 750 && Y == 444)
+                                if (X + Model.Size.Width / 2 >= 755 && Y == 444)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -719,7 +764,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 750 && Y > 444)
+                                else if (X + Model.Size.Width / 2 >= 755 && Y > 444)
                                     Y += velocity;
                                 else
                                     X += velocity;
@@ -728,7 +773,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                if (X + Model.Size.Width / 2 >= 750 && Y == 250)
+                                if (X + Model.Size.Width / 2 >= 755 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -738,7 +783,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 750 && Y > 250)
+                                else if (X + Model.Size.Width / 2 >= 755 && Y > 247)
                                     Y += velocity;
                                 else
                                     X += velocity;
@@ -747,7 +792,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (X + Model.Size.Width / 2 >= 540 && Y == 250)
+                                if (X + Model.Size.Width / 2 >= 540 && Y == 247)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_dole;
@@ -757,7 +802,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_dole;
                                     Y += velocity;
                                 }
-                                else if (X + Model.Size.Width / 2 >= 540 && Y > 250)
+                                else if (X + Model.Size.Width / 2 >= 540 && Y > 247)
                                     Y += velocity;
                                 else
                                     X += velocity;
@@ -773,7 +818,7 @@ namespace TrafficLightsSimulationGame
                         case Direction.WEST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 <= 265 && X == 750)
+                                if (Y + Model.Size.Height / 2 <= 247 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -783,7 +828,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 265 && X < 750)
+                                else if (Y + Model.Size.Height / 2 <= 247 && X < 755)
                                     X -= velocity;
                                 else
                                     Y -= velocity;
@@ -792,7 +837,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 <= 444 && X == 750)
+                                if (Y + Model.Size.Height / 2 <= 444 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -802,7 +847,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 444 && X < 750)
+                                else if (Y + Model.Size.Height / 2 <= 444 && X < 755)
                                     X -= velocity;
                                 else
                                     Y -= velocity;
@@ -830,7 +875,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 <= 265 && X == 531)
+                                if (Y + Model.Size.Height / 2 <= 247 && X == 531)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -840,7 +885,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 265 && X < 531)
+                                else if (Y + Model.Size.Height / 2 <= 247 && X < 531)
                                     X -= velocity;
                                 else
                                     Y -= velocity;
@@ -851,7 +896,7 @@ namespace TrafficLightsSimulationGame
                         case Direction.EAST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 <= 444 && X == 750)
+                                if (Y + Model.Size.Height / 2 <= 444 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -861,7 +906,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 444 && X > 750)
+                                else if (Y + Model.Size.Height / 2 <= 444 && X > 755)
                                     X += velocity;
                                 else
                                     Y -= velocity;
@@ -870,7 +915,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 <= 265 && X == 750)
+                                if (Y + Model.Size.Height / 2 <= 247 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -880,7 +925,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 265 && X > 750)
+                                else if (Y + Model.Size.Height / 2 <= 247 && X > 755)
                                     X += velocity;
                                 else
                                     Y -= velocity;
@@ -889,7 +934,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 <= 265 && X == 531)
+                                if (Y + Model.Size.Height / 2 <= 247 && X == 531)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -899,7 +944,7 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 265 && X > 531)
+                                else if (Y + Model.Size.Height / 2 <= 247 && X > 531)
                                     X += velocity;
                                 else
                                     Y -= velocity;
@@ -935,7 +980,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                if (Y + Model.Size.Height / 2 <= 265 && X == 750)
+                                if (Y + Model.Size.Height / 2 <= 247 && X == 755)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_levo;
@@ -945,11 +990,11 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_levo;
                                     X -= velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 265 && X + Model.Size.Width / 2 > 531)
+                                else if (Y + Model.Size.Height / 2 <= 247 && X + Model.Size.Width / 2 > 531)
                                     X -= velocity;
-                                else if (X + Model.Size.Width / 2 >= 531)
+                                else if (X <= 531)
                                 {
-                                    flipModel(90);
+                                    flipModelUp();
                                     Y -= velocity;
                                 }
                                 else
@@ -965,7 +1010,7 @@ namespace TrafficLightsSimulationGame
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                if (Y + Model.Size.Height / 2 <= 265 && X == 531)
+                                if (Y + Model.Size.Height / 2 <= 247 && X == 531)
                                 {
                                     if (type == 0)
                                         Model = Resources.covek_desno;
@@ -975,11 +1020,11 @@ namespace TrafficLightsSimulationGame
                                         Model = Resources.starce_desno;
                                     X += velocity;
                                 }
-                                else if (Y + Model.Size.Height / 2 <= 265 && X + Model.Size.Width / 2 < 750)
+                                else if (Y + Model.Size.Height / 2 <= 247 && X + Model.Size.Width / 2 < 755)
                                     X += velocity;
-                                else if (X + Model.Size.Width / 2 >= 750)
+                                else if (X + Model.Size.Width / 2 >= 755)
                                 {
-                                    flipModel(270);
+                                    flipModelUp();
                                     Y -= velocity;
                                 }
                                 else
