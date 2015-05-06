@@ -43,6 +43,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewGame";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NewGame_FormClosing);
+            this.Load += new System.EventHandler(this.NewGame_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.NewGame_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.NewGame_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.NewGame_MouseMove);
@@ -51,5 +52,6 @@
         }
 
         #endregion
+
     }
 }

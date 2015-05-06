@@ -27,7 +27,7 @@ namespace TrafficLightsSimulationGame
         {            
             X = x;
             Y = y;
-            done = false;
+            done = false;            
             velocity = 8;
             dir = d;
             Model = null;

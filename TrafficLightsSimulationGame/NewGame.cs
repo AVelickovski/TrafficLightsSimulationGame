@@ -20,6 +20,7 @@ namespace TrafficLightsSimulationGame
         Point pCars,pMan;
         Timer timer1, timer2,timer3,timer4;
         public SoundPlayer kopce;
+        public SoundPlayer scream;
 
         public NewGame()
         {
@@ -61,7 +62,6 @@ namespace TrafficLightsSimulationGame
                 timer1.Start();
                 timer2.Start();
                 timer4.Start();
-
                 Invalidate();
             }
             else
@@ -87,8 +87,10 @@ namespace TrafficLightsSimulationGame
                 timer2.Stop();
                 timer4.Stop();
                 timer3.Start();
+                scream.Play();
                 Graphics g = CreateGraphics();
-                g.DrawImage(Resources.tomato,pMan);
+                Image blood = (Bitmap)Resources.tomato.Clone();
+                g.DrawImage(blood, pMan.X - 10, pMan.Y - 10, blood.Width / 3, blood.Height / 3);
             }
             else
             {
@@ -180,6 +182,11 @@ namespace TrafficLightsSimulationGame
                 else
                     this.Close();
             }
+        }
+
+        private void NewGame_Load(object sender, EventArgs e)
+        {
+            scream = new SoundPlayer(Resources.scream);            
         }
     }
 }
