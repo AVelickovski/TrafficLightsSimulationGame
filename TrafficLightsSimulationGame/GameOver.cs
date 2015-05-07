@@ -18,10 +18,12 @@ namespace TrafficLightsSimulationGame
         public Options def { get; set; }
         public SoundPlayer kopce;
         Timer t;
-        public GameOver(Options d)
+        public GameOver(Options d, int score, string message)
         {
             InitializeComponent();
             def = d;
+            lblScore.Text = score.ToString();
+            lblMessage.Text = message;
             kopce = new SoundPlayer(Resources.kopce);
             panel1.BackgroundImage = Resources.y_u_do_dis;
             nova = false;
