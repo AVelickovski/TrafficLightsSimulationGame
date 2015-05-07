@@ -56,7 +56,10 @@ namespace TrafficLightsSimulationGame
         private void Timer3_Tick(object sender, EventArgs e)
         {
             timer3.Stop();
-            if (MessageBox.Show("Collision!\nDo you want to play again?", "Game over", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            GameOver go = new GameOver();
+            go.StartPosition = FormStartPosition.CenterScreen;
+            go.ShowDialog();
+            if (go.nova == true)
             {
                 stage = new Stage();
                 timer1.Start();
@@ -65,7 +68,9 @@ namespace TrafficLightsSimulationGame
                 Invalidate();
             }
             else
+            {
                 this.Close();
+            }
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
@@ -171,7 +176,10 @@ namespace TrafficLightsSimulationGame
                 timer1.Stop();
                 timer2.Stop();
                 timer4.Stop();
-                if (MessageBox.Show("Traffic Jam!\nDo you want to play again?", "Game over", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                GameOver go = new GameOver();
+                go.StartPosition = FormStartPosition.CenterScreen;
+                go.ShowDialog();
+                if (go.nova == true)
                 {
                     stage = new Stage();
                     timer1.Start();
@@ -180,7 +188,9 @@ namespace TrafficLightsSimulationGame
                     Invalidate();
                 }
                 else
+                {
                     this.Close();
+                }
             }
         }
 
