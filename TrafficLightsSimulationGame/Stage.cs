@@ -147,7 +147,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsNorth[0].done)
                 {
-                    score++;
+                    score+=10;
                     if(carsNorth.Count == 1)
                         carsNorth.RemoveAt(0);
                     else
@@ -162,7 +162,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsEast[0].done)
                 {
-                    score++;
+                    score+=10;
                     if (carsEast.Count == 1)
                         carsEast.RemoveAt(0);
                     else
@@ -176,7 +176,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsSouth[0].done)
                 {
-                    score++;
+                    score+=10;
                     if (carsSouth.Count == 1)
                         carsSouth.RemoveAt(0);
                     else
@@ -190,7 +190,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsWest[0].done)
                 {
-                    score++;
+                    score+=10;
                     if (carsWest.Count == 1)
                         carsWest.RemoveAt(0);
                     else
