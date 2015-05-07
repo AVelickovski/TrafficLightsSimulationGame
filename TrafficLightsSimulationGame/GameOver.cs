@@ -7,16 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrafficLightsSimulationGame.Properties;
 
 namespace TrafficLightsSimulationGame
 {
     public partial class GameOver : Form
     {
         public bool nova { get; set; }
+        Timer t;
         public GameOver()
         {
             InitializeComponent();
+            panel1.BackgroundImage = Resources.y_u_do_dis;
             nova = false;
+            t = new Timer();
+            t.Interval = 1500;
+            t.Tick += new EventHandler(T_Tick);
+            t.Start();
             this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -25,8 +32,10 @@ namespace TrafficLightsSimulationGame
             this.TransparencyKey = Color.Gray;
         }
 
-        private void GameOver_Load(object sender, EventArgs e)
-        {            
+        private void T_Tick(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            t.Stop();
         }
 
         private void button1_Click(object sender, EventArgs e)
