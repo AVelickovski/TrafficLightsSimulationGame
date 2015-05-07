@@ -66,7 +66,7 @@ namespace TrafficLightsSimulationGame
         private void Timer3_Tick(object sender, EventArgs e)
         {
             timer3.Stop();
-            GameOver go = new GameOver();
+            GameOver go = new GameOver(defOptions);
             go.StartPosition = FormStartPosition.CenterScreen;
             go.ShowDialog();
             if (go.nova == true)
@@ -192,7 +192,7 @@ namespace TrafficLightsSimulationGame
                 timer1.Stop();
                 timer2.Stop();
                 timer4.Stop();
-                GameOver go = new GameOver();
+                GameOver go = new GameOver(defOptions);
                 go.StartPosition = FormStartPosition.CenterScreen;
                 go.ShowDialog();
                 if (go.nova == true)
