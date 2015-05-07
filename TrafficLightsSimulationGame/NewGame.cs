@@ -21,12 +21,14 @@ namespace TrafficLightsSimulationGame
         Timer timer1, timer2,timer3,timer4;
         public SoundPlayer kopce;
         public SoundPlayer scream;
+        public Options defOptions;
 
-        public NewGame()
-        {
+        public NewGame(Options def)
+        {            
             InitializeComponent();
+            defOptions = def;
             background = Resources.PlayGround;
-            stage = new Stage();
+            stage = new Stage(defOptions);
             lblScore.BackColor = System.Drawing.Color.Transparent;
             label1.BackColor = System.Drawing.Color.Transparent;
             Width = background.Size.Width;
@@ -34,13 +36,19 @@ namespace TrafficLightsSimulationGame
             DoubleBuffered = true;
             rnd = new Random();
             timer4 = new Timer();
-            timer4.Interval = 5000;
+            if (defOptions.easy == true)
+                timer4.Interval = 8500;
+            else
+                timer4.Interval = 5000;
             timer4.Tick += new EventHandler(Timer4_Tick);
             timer3 = new Timer();
             timer3.Tick += new EventHandler(Timer3_Tick);
             timer3.Interval = 2000;
             timer2 = new Timer();
-            timer2.Interval = 1500;
+            if (defOptions.easy == true)
+                timer2.Interval = 2500;
+            else
+                timer2.Interval = 1500;
             timer2.Tick += new EventHandler(Timer2_Tick); 
             timer1 = new Timer();
             timer1.Interval = 50;
@@ -63,7 +71,7 @@ namespace TrafficLightsSimulationGame
             go.ShowDialog();
             if (go.nova == true)
             {
-                stage = new Stage();
+                stage = new Stage(defOptions);
                 timer1.Start();
                 timer2.Start();
                 timer4.Start();
@@ -95,7 +103,8 @@ namespace TrafficLightsSimulationGame
                 timer2.Stop();
                 timer4.Stop();
                 timer3.Start();
-                scream.Play();
+                if(defOptions.sound == true)
+                    scream.Play();
                 Graphics g = CreateGraphics();
                 Image blood = (Bitmap)Resources.tomato.Clone();
                 g.DrawImage(blood, pMan.X - 10, pMan.Y - 10, blood.Width / 3, blood.Height / 3);
@@ -126,23 +135,27 @@ namespace TrafficLightsSimulationGame
         {
             kopce = new SoundPlayer(Resources.kopce);
             if (e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
-            {                
-                kopce.Play();
+            {
+                if (defOptions.sound == true)
+                    kopce.Play();
                 stage.Lights.Lights[0].changeLight();
             }
             else if (e.X >= stage.Lights.Lights[1].X && e.X <= stage.Lights.Lights[1].X + stage.Lights.Lights[1].getWidth() + 20 && e.Y >= stage.Lights.Lights[1].Y && e.Y <= stage.Lights.Lights[1].Y + stage.Lights.Lights[1].getHeight() + 20)
             {
-                kopce.Play();
+                if (defOptions.sound == true)
+                    kopce.Play();
                 stage.Lights.Lights[1].changeLight();
             }
             else if (e.X >= stage.Lights.Lights[2].X && e.X <= stage.Lights.Lights[2].X + stage.Lights.Lights[2].getWidth() + 20 && e.Y >= stage.Lights.Lights[2].Y && e.Y <= stage.Lights.Lights[2].Y + stage.Lights.Lights[2].getHeight() + 20)
             {
-                kopce.Play();
+                if (defOptions.sound == true)
+                    kopce.Play();
                 stage.Lights.Lights[2].changeLight();
             }
             else if (e.X >= stage.Lights.Lights[3].X && e.X <= stage.Lights.Lights[3].X + stage.Lights.Lights[3].getWidth() + 20 && e.Y >= stage.Lights.Lights[3].Y && e.Y <= stage.Lights.Lights[3].Y + stage.Lights.Lights[3].getHeight() + 20)
             {
-                kopce.Play();
+                if (defOptions.sound == true)
+                    kopce.Play();
                 stage.Lights.Lights[3].changeLight();
             }
             Invalidate(true);
@@ -184,7 +197,7 @@ namespace TrafficLightsSimulationGame
                 go.ShowDialog();
                 if (go.nova == true)
                 {
-                    stage = new Stage();
+                    stage = new Stage(defOptions);
                     timer1.Start();
                     timer2.Start();
                     timer4.Start();

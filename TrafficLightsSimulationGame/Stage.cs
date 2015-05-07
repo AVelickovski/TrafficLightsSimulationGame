@@ -17,9 +17,12 @@ namespace TrafficLightsSimulationGame
         List<ObjectType> collisionNorth, collisionSouth, collisionWest, collisionEast;
         public TrafficLights Lights;
         public SoundPlayer sudar;
+        public Options def;
         public int score { get; set; }
-        public Stage()
+        public Stage(Options o)
         {
+            sudar = new SoundPlayer(Resources.sudar);
+            def = o;
             score = 0;
             carsEast = new List<Vehicle>();
             carsNorth = new List<Vehicle>();
@@ -585,9 +588,9 @@ namespace TrafficLightsSimulationGame
             return false;
         }
         public void drawBam(Point loc, Graphics g)
-        {
-            sudar = new SoundPlayer(Resources.sudar);
-            sudar.Play();
+        {            
+            if(def.sound == true)
+                sudar.Play();
             g.DrawImage(Resources.BAM, loc.X, loc.Y);
         }
     }
