@@ -563,7 +563,7 @@ namespace TrafficLightsSimulationGame
                 if (c.isWaiting)
                     i++;
             }
-            if (i == 5)
+            if (i == 4)
                 return true;
             else
                 i = 0;

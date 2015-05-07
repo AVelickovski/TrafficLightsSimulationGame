@@ -25,10 +25,6 @@ namespace TrafficLightsSimulationGame
             this.TransparencyKey = Color.Gray;
         }
 
-        private void GameOver_Load(object sender, EventArgs e)
-        {            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             nova = true;
