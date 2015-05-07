@@ -17,8 +17,10 @@ namespace TrafficLightsSimulationGame
         List<ObjectType> collisionNorth, collisionSouth, collisionWest, collisionEast;
         public TrafficLights Lights;
         public SoundPlayer sudar;
+        public int score { get; set; }
         public Stage()
         {
+            score = 0;
             carsEast = new List<Vehicle>();
             carsNorth = new List<Vehicle>();
             carsWest = new List<Vehicle>();
@@ -145,6 +147,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsNorth[0].done)
                 {
+                    score++;
                     if(carsNorth.Count == 1)
                         carsNorth.RemoveAt(0);
                     else
@@ -159,6 +162,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsEast[0].done)
                 {
+                    score++;
                     if (carsEast.Count == 1)
                         carsEast.RemoveAt(0);
                     else
@@ -172,6 +176,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsSouth[0].done)
                 {
+                    score++;
                     if (carsSouth.Count == 1)
                         carsSouth.RemoveAt(0);
                     else
@@ -185,6 +190,7 @@ namespace TrafficLightsSimulationGame
             {
                 if (carsWest[0].done)
                 {
+                    score++;
                     if (carsWest.Count == 1)
                         carsWest.RemoveAt(0);
                     else
