@@ -148,7 +148,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Options";
             this.Text = "Options";
-            this.Load += new System.EventHandler(this.Options_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
