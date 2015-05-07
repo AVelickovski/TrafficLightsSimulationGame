@@ -27,6 +27,8 @@ namespace TrafficLightsSimulationGame
             InitializeComponent();
             background = Resources.PlayGround;
             stage = new Stage();
+            lblScore.BackColor = System.Drawing.Color.Transparent;
+            label1.BackColor = System.Drawing.Color.Transparent;
             Width = background.Size.Width;
             Height = background.Size.Height;
             DoubleBuffered = true;
@@ -75,6 +77,7 @@ namespace TrafficLightsSimulationGame
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
+            lblScore.Text = stage.score.ToString();
             pCars = stage.checkCollisionCars();
             pMan = stage.checkCollisionMan();
             if (!pCars.IsEmpty)
