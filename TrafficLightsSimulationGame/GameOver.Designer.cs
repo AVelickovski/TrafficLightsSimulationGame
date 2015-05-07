@@ -33,17 +33,20 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.lblScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 249);
+            this.button1.Location = new System.Drawing.Point(25, 388);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 72);
+            this.button1.Size = new System.Drawing.Size(174, 52);
             this.button1.TabIndex = 0;
             this.button1.Text = "NEW GAME";
             this.button1.UseVisualStyleBackColor = false;
@@ -52,11 +55,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(205, 249);
+            this.button2.Location = new System.Drawing.Point(205, 388);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(187, 72);
+            this.button2.Size = new System.Drawing.Size(164, 52);
             this.button2.TabIndex = 1;
             this.button2.Text = "MENU";
             this.button2.UseVisualStyleBackColor = false;
@@ -64,9 +67,9 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(5, 4);
+            this.panel1.Location = new System.Drawing.Point(25, 29);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 350);
+            this.panel1.Size = new System.Drawing.Size(344, 428);
             this.panel1.TabIndex = 3;
             // 
             // pictureBox1
@@ -74,24 +77,65 @@
             this.pictureBox1.Image = global::TrafficLightsSimulationGame.Properties.Resources.game_over;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(377, 231);
+            this.pictureBox1.Size = new System.Drawing.Size(377, 466);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 332);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 33);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "YOUR SCORE :";
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblMessage.Font = new System.Drawing.Font("Tahoma", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.White;
+            this.lblMessage.Location = new System.Drawing.Point(54, 269);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(288, 48);
+            this.lblMessage.TabIndex = 5;
+            this.lblMessage.Text = "TRAFFIC JAM";
+            // 
+            // lblScore
+            // 
+            this.lblScore.AutoSize = true;
+            this.lblScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.lblScore.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore.ForeColor = System.Drawing.Color.White;
+            this.lblScore.Location = new System.Drawing.Point(284, 332);
+            this.lblScore.Name = "lblScore";
+            this.lblScore.Size = new System.Drawing.Size(32, 33);
+            this.lblScore.TabIndex = 6;
+            this.lblScore.Text = "0";
             // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 366);
+            this.ClientSize = new System.Drawing.Size(400, 490);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblScore);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameOver";
             this.Text = "Game Over";
+            this.Load += new System.EventHandler(this.GameOver_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -101,5 +145,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Label lblScore;
     }
 }

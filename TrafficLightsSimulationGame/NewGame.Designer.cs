@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewGame));
             this.label1 = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblDifficulty = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,12 +57,36 @@
             this.lblScore.TabIndex = 1;
             this.lblScore.Text = "0";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(190, 37);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "DIFFICULTY :";
+            // 
+            // lblDifficulty
+            // 
+            this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Font = new System.Drawing.Font("Franklin Gothic Medium", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDifficulty.ForeColor = System.Drawing.Color.Black;
+            this.lblDifficulty.Location = new System.Drawing.Point(208, 9);
+            this.lblDifficulty.Name = "lblDifficulty";
+            this.lblDifficulty.Size = new System.Drawing.Size(88, 37);
+            this.lblDifficulty.TabIndex = 3;
+            this.lblDifficulty.Text = "EASY";
+            // 
             // NewGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1292, 350);
+            this.Controls.Add(this.lblDifficulty);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -84,6 +110,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDifficulty;
 
     }
 }

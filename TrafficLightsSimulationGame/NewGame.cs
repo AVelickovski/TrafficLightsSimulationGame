@@ -27,6 +27,12 @@ namespace TrafficLightsSimulationGame
         {            
             InitializeComponent();
             defOptions = def;
+            lblDifficulty.BackColor = System.Drawing.Color.Transparent;
+            label2.BackColor = System.Drawing.Color.Transparent;
+            if (defOptions.easy == true)
+                lblDifficulty.Text = "EASY";
+            else
+                lblDifficulty.Text = "HARD";
             background = Resources.PlayGround;
             stage = new Stage(defOptions);
             lblScore.BackColor = System.Drawing.Color.Transparent;
@@ -66,7 +72,7 @@ namespace TrafficLightsSimulationGame
         private void Timer3_Tick(object sender, EventArgs e)
         {
             timer3.Stop();
-            GameOver go = new GameOver();
+            GameOver go = new GameOver(defOptions, stage.score, "COLLISION");
             go.StartPosition = FormStartPosition.CenterScreen;
             go.ShowDialog();
             if (go.nova == true)
@@ -192,7 +198,7 @@ namespace TrafficLightsSimulationGame
                 timer1.Stop();
                 timer2.Stop();
                 timer4.Stop();
-                GameOver go = new GameOver();
+                GameOver go = new GameOver(defOptions, stage.score, "TRAFFIC JAM");
                 go.StartPosition = FormStartPosition.CenterScreen;
                 go.ShowDialog();
                 if (go.nova == true)
