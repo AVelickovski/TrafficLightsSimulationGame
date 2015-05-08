@@ -144,6 +144,16 @@ namespace TrafficLightsSimulationGame
                 m.draw(g);
             Lights.Draw(g);
         }
+        public void selected(Point p)
+        {
+            foreach(Man m in manList)
+            {
+                if (p.X >= m.X && p.X <= m.X + m.getWidth() && p.Y >= m.Y && p.Y <= m.Y + m.getHeight())
+                    m.isSelected = true;
+                else
+                    m.isSelected = false;
+            }
+        }
         private void removeCarAndMan()
         {
             if(carsNorth.Count != 0)
@@ -287,7 +297,7 @@ namespace TrafficLightsSimulationGame
                 }
                 else
                 {
-                    if (c.Y + c.getHeight() >= 560 && c.Y < 482)
+                    if (c.Y + c.getHeight() >= 482 && c.Y < 560)
                         collisionSouth.Add(c);
                 }
             }

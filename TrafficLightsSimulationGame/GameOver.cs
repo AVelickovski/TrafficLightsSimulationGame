@@ -59,10 +59,5 @@ namespace TrafficLightsSimulationGame
                 kopce.Play();
             this.Close();
         }
-
-        private void GameOver_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

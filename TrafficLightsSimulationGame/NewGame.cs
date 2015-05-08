@@ -43,7 +43,7 @@ namespace TrafficLightsSimulationGame
             rnd = new Random();
             timer4 = new Timer();
             if (defOptions.easy == true)
-                timer4.Interval = 8500;
+                timer4.Interval = 7000;
             else
                 timer4.Interval = 5000;
             timer4.Tick += new EventHandler(Timer4_Tick);
@@ -52,7 +52,7 @@ namespace TrafficLightsSimulationGame
             timer3.Interval = 2000;
             timer2 = new Timer();
             if (defOptions.easy == true)
-                timer2.Interval = 2500;
+                timer2.Interval = 2000;
             else
                 timer2.Interval = 1500;
             timer2.Tick += new EventHandler(Timer2_Tick); 
@@ -169,6 +169,7 @@ namespace TrafficLightsSimulationGame
 
         private void NewGame_MouseMove(object sender, MouseEventArgs e)
         {
+            stage.selected(e.Location);
             if(e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
             {
                 this.Cursor = Cursors.Hand;

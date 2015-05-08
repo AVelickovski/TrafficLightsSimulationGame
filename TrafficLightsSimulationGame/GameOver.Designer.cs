@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOver));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,13 +64,6 @@
             this.button2.Text = "MENU";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(25, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 428);
-            this.panel1.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -117,6 +110,13 @@
             this.lblScore.TabIndex = 6;
             this.lblScore.Text = "0";
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(25, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(344, 428);
+            this.panel1.TabIndex = 3;
+            // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,7 +132,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameOver";
             this.Text = "Game Over";
-            this.Load += new System.EventHandler(this.GameOver_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -144,9 +143,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblScore;
+        private System.Windows.Forms.Panel panel1;
     }
 }

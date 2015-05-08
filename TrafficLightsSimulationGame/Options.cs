@@ -31,6 +31,8 @@ namespace TrafficLightsSimulationGame
                 kopce.Play();
             sound = true;
             label4.Text = "ON";
+            button1.BackColor = Color.FromArgb(0, 192, 0);
+            button2.BackColor = Color.FromArgb(192, 192, 0);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,6 +41,8 @@ namespace TrafficLightsSimulationGame
                 kopce.Play();
             sound = false;
             label4.Text = "OFF";
+            button2.BackColor = Color.FromArgb(0, 192, 0);
+            button1.BackColor = Color.FromArgb(192, 192, 0);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -47,6 +51,8 @@ namespace TrafficLightsSimulationGame
                 kopce.Play();
             label3.Text = "EASY";
             easy = true;
+            button4.BackColor = Color.FromArgb(0, 192, 0);
+            button3.BackColor = Color.FromArgb(192, 192, 0);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -55,6 +61,38 @@ namespace TrafficLightsSimulationGame
                 kopce.Play();
             easy = false;
             label3.Text = "HARD";
+            button3.BackColor = Color.FromArgb(0, 192, 0);
+            button4.BackColor = Color.FromArgb(192, 192, 0);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button2_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button4_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button3_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void button5_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
         }
     }
 }
