@@ -18,7 +18,7 @@ namespace TrafficLightsSimulationGame
         Stage stage;
         Random rnd;
         Point pCars,pMan;
-        Timer timer1, timer2,timer3,timer4;
+        Timer NextMove, CarSpawn,Delay,ManSpawn;
         public SoundPlayer kopce;
         public SoundPlayer scream;
         public Options defOptions;
@@ -38,49 +38,54 @@ namespace TrafficLightsSimulationGame
             lblScore.BackColor = System.Drawing.Color.Transparent;
             label1.BackColor = System.Drawing.Color.Transparent;
             Width = background.Size.Width;
-            Height = background.Size.Height;
+            Height = background.Size.Height+20;
             DoubleBuffered = true;
+            kopce = new SoundPlayer(Resources.kopce);
             rnd = new Random();
-            timer4 = new Timer();
+            ManSpawn = new Timer();
+            ManSpawn.Tick += new EventHandler(ManSpawn_Tick);
+            Delay = new Timer();
+            Delay.Tick += new EventHandler(Delay_Tick);
+            Delay.Interval = 2000;
+            CarSpawn = new Timer();
             if (defOptions.easy == true)
-                timer4.Interval = 7000;
+            {
+                CarSpawn.Interval = 2000;
+                ManSpawn.Interval = 7000;
+            }
+
             else
-                timer4.Interval = 5000;
-            timer4.Tick += new EventHandler(Timer4_Tick);
-            timer3 = new Timer();
-            timer3.Tick += new EventHandler(Timer3_Tick);
-            timer3.Interval = 2000;
-            timer2 = new Timer();
-            if (defOptions.easy == true)
-                timer2.Interval = 2000;
-            else
-                timer2.Interval = 1500;
-            timer2.Tick += new EventHandler(Timer2_Tick); 
-            timer1 = new Timer();
-            timer1.Interval = 50;
-            timer1.Tick += new EventHandler(Timer1_Tick);
-            timer1.Start();
-            timer2.Start();
-            timer4.Start();
+            {
+                CarSpawn.Interval = 1500;
+                ManSpawn.Interval = 5000;
+            }
+                
+            CarSpawn.Tick += new EventHandler(CarSpawn_Tick); 
+            NextMove = new Timer();
+            NextMove.Interval = 50;
+            NextMove.Tick += new EventHandler(NextMove_Tick);
+            NextMove.Start();
+            CarSpawn.Start();
+            ManSpawn.Start();
         }
 
-        private void Timer4_Tick(object sender, EventArgs e)
+        private void ManSpawn_Tick(object sender, EventArgs e)
         {
             stage.addMan(rnd.Next(4), rnd.Next(2), rnd.Next(3), rnd.Next(2), rnd.Next(3));
         }
 
-        private void Timer3_Tick(object sender, EventArgs e)
+        private void Delay_Tick(object sender, EventArgs e)
         {
-            timer3.Stop();
-            GameOver go = new GameOver(defOptions, stage.score, "COLLISION");
+            Delay.Stop();
+            GameOver go = new GameOver(defOptions, "COLLISION");
             go.StartPosition = FormStartPosition.CenterScreen;
             go.ShowDialog();
             if (go.nova == true)
             {
                 stage = new Stage(defOptions);
-                timer1.Start();
-                timer2.Start();
-                timer4.Start();
+                NextMove.Start();
+                CarSpawn.Start();
+                ManSpawn.Start();
                 Invalidate();
             }
             else
@@ -89,26 +94,26 @@ namespace TrafficLightsSimulationGame
             }
         }
 
-        private void Timer1_Tick(object sender, EventArgs e)
+        private void NextMove_Tick(object sender, EventArgs e)
         {
-            lblScore.Text = stage.score.ToString();
+            lblScore.Text = Stage.score.ToString();
             pCars = stage.checkCollisionCars();
             pMan = stage.checkCollisionMan();
             if (!pCars.IsEmpty)
             {
-                timer1.Stop();
-                timer2.Stop();
-                timer4.Stop();
-                timer3.Start();
+                NextMove.Stop();
+                CarSpawn.Stop();
+                ManSpawn.Stop();
+                Delay.Start();
                 Graphics g = CreateGraphics();
                 stage.drawBam(pCars, g);
             }
             else if (!pMan.IsEmpty)
             {
-                timer1.Stop();
-                timer2.Stop();
-                timer4.Stop();
-                timer3.Start();
+                NextMove.Stop();
+                CarSpawn.Stop();
+                ManSpawn.Stop();
+                Delay.Start();
                 if(defOptions.sound == true)
                     scream.Play();
                 Graphics g = CreateGraphics();
@@ -127,50 +132,53 @@ namespace TrafficLightsSimulationGame
         {
             e.Graphics.Clear(Color.White);
             e.Graphics.DrawImage(background, 0, 0);
+            stage.checkDanger(e.Graphics);
             stage.Draw(e.Graphics);
         }
 
         private void NewGame_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer1.Stop();
-            timer2.Stop();
-            timer4.Stop();
+            NextMove.Stop();
+            CarSpawn.Stop();
+            ManSpawn.Stop();
         }
 
         private void NewGame_MouseClick(object sender, MouseEventArgs e)
         {
-            kopce = new SoundPlayer(Resources.kopce);
             if (e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
             {
                 if (defOptions.sound == true)
                     kopce.Play();
                 stage.Lights.Lights[0].changeLight();
+                Invalidate();
             }
             else if (e.X >= stage.Lights.Lights[1].X && e.X <= stage.Lights.Lights[1].X + stage.Lights.Lights[1].getWidth() + 20 && e.Y >= stage.Lights.Lights[1].Y && e.Y <= stage.Lights.Lights[1].Y + stage.Lights.Lights[1].getHeight() + 20)
             {
                 if (defOptions.sound == true)
                     kopce.Play();
                 stage.Lights.Lights[1].changeLight();
+                Invalidate();
             }
             else if (e.X >= stage.Lights.Lights[2].X && e.X <= stage.Lights.Lights[2].X + stage.Lights.Lights[2].getWidth() + 20 && e.Y >= stage.Lights.Lights[2].Y && e.Y <= stage.Lights.Lights[2].Y + stage.Lights.Lights[2].getHeight() + 20)
             {
                 if (defOptions.sound == true)
                     kopce.Play();
                 stage.Lights.Lights[2].changeLight();
+                Invalidate();
             }
             else if (e.X >= stage.Lights.Lights[3].X && e.X <= stage.Lights.Lights[3].X + stage.Lights.Lights[3].getWidth() + 20 && e.Y >= stage.Lights.Lights[3].Y && e.Y <= stage.Lights.Lights[3].Y + stage.Lights.Lights[3].getHeight() + 20)
             {
                 if (defOptions.sound == true)
                     kopce.Play();
                 stage.Lights.Lights[3].changeLight();
+                Invalidate();
             }
-            Invalidate(true);
         }
 
         private void NewGame_MouseMove(object sender, MouseEventArgs e)
         {
             stage.selected(e.Location);
-            if(e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
+            if (e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
             {
                 this.Cursor = Cursors.Hand;
             }
@@ -191,23 +199,23 @@ namespace TrafficLightsSimulationGame
             }
         }
 
-        private void Timer2_Tick(object sender, EventArgs e)
+        private void CarSpawn_Tick(object sender, EventArgs e)
         {
             stage.addCar(rnd.Next(4), rnd.Next(8));
             if(stage.checkJam())
             {
-                timer1.Stop();
-                timer2.Stop();
-                timer4.Stop();
-                GameOver go = new GameOver(defOptions, stage.score, "TRAFFIC JAM");
+                NextMove.Stop();
+                CarSpawn.Stop();
+                ManSpawn.Stop();
+                GameOver go = new GameOver(defOptions, "TRAFFIC JAM");
                 go.StartPosition = FormStartPosition.CenterScreen;
                 go.ShowDialog();
                 if (go.nova == true)
                 {
                     stage = new Stage(defOptions);
-                    timer1.Start();
-                    timer2.Start();
-                    timer4.Start();
+                    NextMove.Start();
+                    CarSpawn.Start();
+                    ManSpawn.Start();
                     Invalidate();
                 }
                 else

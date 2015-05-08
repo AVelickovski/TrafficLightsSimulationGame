@@ -121,44 +121,44 @@ namespace TrafficLightsSimulationGame
                         case Direction.EAST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(540, 0), new Point(540, 444), new Point(1283, 444) };
+                                Point[] lines = new Point[3] { new Point(540, 0), new Point(540, 444), new Point(1303, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(540, 0), new Point(540, 265), new Point(1283, 265) };
+                                Point[] lines = new Point[3] { new Point(540, 0), new Point(540, 265), new Point(1303, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(755, 0), new Point(755, 265), new Point(1283, 265) };
+                                Point[] lines = new Point[3] { new Point(755, 0), new Point(755, 265), new Point(1303, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(755, 0), new Point(755, 444), new Point(1283, 444) };
+                                Point[] lines = new Point[3] { new Point(755, 0), new Point(755, 444), new Point(1303, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
                         case Direction.SOUTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[2] { new Point(540, 0), new Point(540, 658) };
+                                Point[] lines = new Point[2] { new Point(540, 0), new Point(540, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[4] { new Point(540, 0), new Point(540, 444), new Point(755, 444), new Point(755,658) };
+                                Point[] lines = new Point[4] { new Point(540, 0), new Point(540, 444), new Point(755, 444), new Point(755,688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[2] { new Point(755, 0), new Point(755, 658) };
+                                Point[] lines = new Point[2] { new Point(755, 0), new Point(755, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[4] { new Point(755, 0), new Point(755, 444), new Point(540, 444), new Point(540, 658) };
+                                Point[] lines = new Point[4] { new Point(755, 0), new Point(755, 444), new Point(540, 444), new Point(540, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
@@ -170,66 +170,66 @@ namespace TrafficLightsSimulationGame
                         case Direction.WEST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[2] { new Point(1283, 265), new Point(0, 265) };
+                                Point[] lines = new Point[2] { new Point(1303, 265), new Point(0, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[4] { new Point(1283, 265), new Point(540, 265), new Point(540, 444), new Point(0, 444) };
+                                Point[] lines = new Point[4] { new Point(1303, 265), new Point(540, 265), new Point(540, 444), new Point(0, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[2] { new Point(1283, 444), new Point(0, 444) };
+                                Point[] lines = new Point[2] { new Point(1303, 444), new Point(0, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[4] { new Point(1283, 444), new Point(540, 444), new Point(540, 265), new Point(0, 265) };
+                                Point[] lines = new Point[4] { new Point(1303, 444), new Point(540, 444), new Point(540, 265), new Point(0, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
                         case Direction.NORTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 265), new Point(755, 265), new Point(755, 0) };
+                                Point[] lines = new Point[3] { new Point(1303, 265), new Point(755, 265), new Point(755, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 265), new Point(540, 265), new Point(540, 0) };
+                                Point[] lines = new Point[3] { new Point(1303, 265), new Point(540, 265), new Point(540, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 444), new Point(540, 444), new Point(540, 0) };
+                                Point[] lines = new Point[3] { new Point(1303, 444), new Point(540, 444), new Point(540, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 444), new Point(755, 444), new Point(755, 0) };
+                                Point[] lines = new Point[3] { new Point(1303, 444), new Point(755, 444), new Point(755, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
                         case Direction.SOUTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 265), new Point(540, 265), new Point(540, 658) };
+                                Point[] lines = new Point[3] { new Point(1303, 265), new Point(540, 265), new Point(540, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 265), new Point(755, 265), new Point(755, 658) };
+                                Point[] lines = new Point[3] { new Point(1303, 265), new Point(755, 265), new Point(755, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 444), new Point(755, 444), new Point(755, 658) };
+                                Point[] lines = new Point[3] { new Point(1303, 444), new Point(755, 444), new Point(755, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(1283, 444), new Point(540, 444), new Point(540, 658) };
+                                Point[] lines = new Point[3] { new Point(1303, 444), new Point(540, 444), new Point(540, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
@@ -241,22 +241,22 @@ namespace TrafficLightsSimulationGame
                         case Direction.EAST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[2] { new Point(0, 444), new Point(1283, 444) };
+                                Point[] lines = new Point[2] { new Point(0, 444), new Point(1303, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[4] { new Point(0, 444), new Point(755, 444), new Point(755, 265), new Point(1283,265) };
+                                Point[] lines = new Point[4] { new Point(0, 444), new Point(755, 444), new Point(755, 265), new Point(1303,265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[2] { new Point(0, 265), new Point(1283, 265)};
+                                Point[] lines = new Point[2] { new Point(0, 265), new Point(1303, 265)};
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[4] { new Point(0, 265), new Point(755, 265), new Point(755, 444), new Point(1283, 444) };
+                                Point[] lines = new Point[4] { new Point(0, 265), new Point(755, 265), new Point(755, 444), new Point(1303, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
@@ -285,22 +285,22 @@ namespace TrafficLightsSimulationGame
                         case Direction.SOUTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(0, 444), new Point(540, 444), new Point(540, 658) };
+                                Point[] lines = new Point[3] { new Point(0, 444), new Point(540, 444), new Point(540, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(0, 444), new Point(755, 444), new Point(755, 658) };
+                                Point[] lines = new Point[3] { new Point(0, 444), new Point(755, 444), new Point(755, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(0, 265), new Point(755, 265), new Point(755, 658) };
+                                Point[] lines = new Point[3] { new Point(0, 265), new Point(755, 265), new Point(755, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(0, 265), new Point(540, 265), new Point(540, 658) };
+                                Point[] lines = new Point[3] { new Point(0, 265), new Point(540, 265), new Point(540, 688) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
@@ -312,66 +312,66 @@ namespace TrafficLightsSimulationGame
                         case Direction.WEST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(755, 658), new Point(755, 265), new Point(0, 265) };
+                                Point[] lines = new Point[3] { new Point(755, 688), new Point(755, 265), new Point(0, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(755, 658), new Point(755, 444), new Point(0, 444) };
+                                Point[] lines = new Point[3] { new Point(755, 688), new Point(755, 444), new Point(0, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(540, 658), new Point(540, 444), new Point(0, 444) };
+                                Point[] lines = new Point[3] { new Point(540, 688), new Point(540, 444), new Point(0, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(540, 658), new Point(540, 265), new Point(0, 265) };
+                                Point[] lines = new Point[3] { new Point(540, 688), new Point(540, 265), new Point(0, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
                         case Direction.EAST:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(755, 658), new Point(755, 444), new Point(1283, 444) };
+                                Point[] lines = new Point[3] { new Point(755, 688), new Point(755, 444), new Point(1303, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(755, 658), new Point(755, 265), new Point(1283, 265) };
+                                Point[] lines = new Point[3] { new Point(755, 688), new Point(755, 265), new Point(1303, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[3] { new Point(540, 658), new Point(540, 265), new Point(1283, 265) };
+                                Point[] lines = new Point[3] { new Point(540, 688), new Point(540, 265), new Point(1303, 265) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[3] { new Point(540, 658), new Point(540, 444), new Point(1283, 444) };
+                                Point[] lines = new Point[3] { new Point(540, 688), new Point(540, 444), new Point(1303, 444) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
                         case Direction.NORTH:
                             if (pointFrom == 0 && pointTo == 1)
                             {
-                                Point[] lines = new Point[2] { new Point(755, 658), new Point(755, 0) };
+                                Point[] lines = new Point[2] { new Point(755, 688), new Point(755, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 0 && pointTo == 0)
                             {
-                                Point[] lines = new Point[4] { new Point(755, 658), new Point(755, 265), new Point(540, 268), new Point(540,0) };
+                                Point[] lines = new Point[4] { new Point(755, 688), new Point(755, 265), new Point(540, 268), new Point(540,0) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
-                                Point[] lines = new Point[2] { new Point(540, 658), new Point(540, 0) };
+                                Point[] lines = new Point[2] { new Point(540, 688), new Point(540, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             else if (pointFrom == 1 && pointTo == 1)
                             {
-                                Point[] lines = new Point[4] { new Point(540, 658), new Point(540, 265), new Point(755, 268), new Point(755, 0) };
+                                Point[] lines = new Point[4] { new Point(540, 688), new Point(540, 265), new Point(755, 268), new Point(755, 0) };
                                 g.DrawLines(pen, lines);
                             }
                             break;
@@ -539,7 +539,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 0 && pointTo == 0)
@@ -558,7 +558,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 1 && pointTo == 0)
@@ -577,7 +577,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 1 && pointTo == 1)
@@ -596,7 +596,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             break;
@@ -894,7 +894,7 @@ namespace TrafficLightsSimulationGame
                             if (pointFrom == 0 && pointTo == 1)
                             {
                                 X += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 0 && pointTo == 0)
@@ -918,13 +918,13 @@ namespace TrafficLightsSimulationGame
                                 }
                                 else
                                     X += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 1 && pointTo == 0)
                             {
                                 X += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 1 && pointTo == 1)
@@ -948,7 +948,7 @@ namespace TrafficLightsSimulationGame
                                 }
                                 else
                                     X += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             break;
@@ -1208,7 +1208,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y -= velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 0 && pointTo == 0)
@@ -1227,7 +1227,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y -= velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 1 && pointTo == 0)
@@ -1246,7 +1246,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y -= velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             else if (pointFrom == 1 && pointTo == 1)
@@ -1265,7 +1265,7 @@ namespace TrafficLightsSimulationGame
                                     X += velocity;
                                 else
                                     Y += velocity;
-                                if (X >= 1283)
+                                if (X >= 1303)
                                     done = true;
                             }
                             break;

@@ -124,9 +124,6 @@
     <None Include="Resources\TrafficJam.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CarModel1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\bam.png" />
   </ItemGroup>
   <ItemGroup>
@@ -140,9 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\za igrata\koli\ford.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\za igrata\koli\kamion.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\za igrata\koli\karavan.png" />
@@ -221,9 +215,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\game_over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\y-u-do-dis.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

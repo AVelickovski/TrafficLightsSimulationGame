@@ -93,16 +93,6 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap CarModel1 {
-            get {
-                object obj = ResourceManager.GetObject("CarModel1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap covek_desno {
             get {
                 object obj = ResourceManager.GetObject("covek_desno", resourceCulture);
@@ -206,16 +196,6 @@ namespace TrafficLightsSimulationGame.Properties {
         internal static System.Drawing.Bitmap isklucen {
             get {
                 object obj = ResourceManager.GetObject("isklucen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap kamion {
-            get {
-                object obj = ResourceManager.GetObject("kamion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -373,16 +353,6 @@ namespace TrafficLightsSimulationGame.Properties {
         internal static System.Drawing.Bitmap uklucen {
             get {
                 object obj = ResourceManager.GetObject("uklucen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap y_u_do_dis {
-            get {
-                object obj = ResourceManager.GetObject("y_u_do_dis", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

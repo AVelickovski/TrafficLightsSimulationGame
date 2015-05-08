@@ -18,7 +18,9 @@ namespace TrafficLightsSimulationGame
         public TrafficLights Lights;
         public SoundPlayer sudar;
         public Options def;
-        public int score { get; set; }
+        bool[] danger;
+        int flash;
+        public static int score { get; set; }
         public Stage(Options o)
         {
             sudar = new SoundPlayer(Resources.sudar);
@@ -35,36 +37,38 @@ namespace TrafficLightsSimulationGame
             collisionEast = new List<ObjectType>();
             collisionAreaCars = new List<Vehicle>();
             Lights = new TrafficLights();
+            danger = new bool[4] { false, false, false, false };
+            flash = 1;
         }
         public void addCar(int direction, int type)
         {
             if(direction == 0)
             {
                 if (carsNorth.Count == 0)
-                    carsNorth.Add(new Vehicle(590, -60, type, Vehicle.Direction.NORTH, null));
+                    carsNorth.Add(new Vehicle(590, -80, type, Vehicle.Direction.NORTH, null));
                 else
-                    carsNorth.Add(new Vehicle(590, -60, type, Vehicle.Direction.NORTH, carsNorth[carsNorth.Count-1]));
+                    carsNorth.Add(new Vehicle(590, -80, type, Vehicle.Direction.NORTH, carsNorth[carsNorth.Count-1]));
             }
             else if(direction == 1)
             {
                 if (carsEast.Count == 0)
-                    carsEast.Add(new Vehicle(1343, 300, type, Vehicle.Direction.EAST, null));
+                    carsEast.Add(new Vehicle(1363, 300, type, Vehicle.Direction.EAST, null));
                 else
-                    carsEast.Add(new Vehicle(1343, 300, type, Vehicle.Direction.EAST, carsEast[carsEast.Count - 1]));
+                    carsEast.Add(new Vehicle(1363, 300, type, Vehicle.Direction.EAST, carsEast[carsEast.Count - 1]));
             }
             else if (direction == 2)
             {
                 if (carsWest.Count == 0)
-                    carsWest.Add(new Vehicle(-60, 380, type, Vehicle.Direction.WEST, null));
+                    carsWest.Add(new Vehicle(-80, 380, type, Vehicle.Direction.WEST, null));
                 else
-                    carsWest.Add(new Vehicle(-60, 380, type, Vehicle.Direction.WEST, carsWest[carsWest.Count - 1]));
+                    carsWest.Add(new Vehicle(-80, 380, type, Vehicle.Direction.WEST, carsWest[carsWest.Count - 1]));
             }
             else
             {
                 if (carsSouth.Count == 0)
-                    carsSouth.Add(new Vehicle(676, 678, type, Vehicle.Direction.SOUTH, null));
+                    carsSouth.Add(new Vehicle(676, 698, type, Vehicle.Direction.SOUTH, null));
                 else
-                    carsSouth.Add(new Vehicle(676, 678, type, Vehicle.Direction.SOUTH, carsSouth[carsSouth.Count - 1]));
+                    carsSouth.Add(new Vehicle(676, 698, type, Vehicle.Direction.SOUTH, carsSouth[carsSouth.Count - 1]));
             }
         }
         public void addMan(int from,int pointFrom, int to, int pointTo, int type)
@@ -507,7 +511,7 @@ namespace TrafficLightsSimulationGame
                         {
                             if ((m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
-                            else if ((m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                            else if ((m.X + m.getWidth() >= v.X && m.X + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X + m.getWidth() >= v.X && m.X + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
                         }
                 }
@@ -519,7 +523,7 @@ namespace TrafficLightsSimulationGame
                     {
                         if (m is Man)
                         {
-                            if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y - 10 <= v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 <= v.Y + v.getHeight()))
+                            if ((m.X + 10 >= v.X && m.X + 10 <= v.X + v.getWidth() && m.Y - 10 + m.getHeight()/2 > v.Y && m.Y - 10 + m.getHeight() / 2 <= v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 <= v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
                             else if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
@@ -535,7 +539,7 @@ namespace TrafficLightsSimulationGame
                         {
                             if ((m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X + 10 > v.X && m.X + 10 <= v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
-                            else if ((m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
+                            else if ((m.X + m.getWidth() >= v.X && m.X + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 < v.Y + v.getHeight()) || (m.X + m.getWidth() >= v.X && m.X + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
                         }
                     }
@@ -547,7 +551,7 @@ namespace TrafficLightsSimulationGame
                     {
                         if (m is Man)
                         {
-                            if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y - 10 <= v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 <= v.Y + v.getHeight()))
+                            if ((m.X + 10 >= v.X && m.X + 10 <= v.X + v.getWidth() && m.Y - 10 + m.getHeight() / 2 > v.Y && m.Y - 10 + m.getHeight() / 2 <= v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y + 10 > v.Y && m.Y + 10 <= v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
                             else if ((m.X + 10 >= v.X && m.X + 10 < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()) || (m.X - 10 + m.getWidth() >= v.X && m.X - 10 + m.getWidth() < v.X + v.getWidth() && m.Y - 10 + m.getHeight() >= v.Y && m.Y - 10 + m.getHeight() < v.Y + v.getHeight()))
                                 return new Point(m.X - 10, m.Y - 10);
@@ -556,46 +560,103 @@ namespace TrafficLightsSimulationGame
             }
             return Point.Empty;
         }
-        public bool checkJam()
+        int checkJamNorth()
         {
             int i = 0;
-            foreach(Vehicle c in carsNorth)
+            foreach(Vehicle v in carsNorth)
             {
-                if (c.isWaiting)
-                    i ++;
-            }
-            if (i == 5)
-                return true;
-            else
-                i = 0;
-            foreach (Vehicle c in carsWest)
-            {
-                if (c.isWaiting)
+                if (v.isWaiting)
                     i++;
             }
-            if (i == 9)
-                return true;
+            if (i < 4)
+                danger[0] = false;
             else
-                i = 0;
-            foreach (Vehicle c in carsSouth)
+                danger[0] = true;
+            return i;
+        }
+        int checkJamEast()
+        {
+            int i = 0;
+            foreach (Vehicle v in carsEast)
             {
-                if (c.isWaiting)
+                if (v.isWaiting)
                     i++;
             }
-            if (i == 4)
-                return true;
+            if (i < 8)
+                danger[3] = false;
             else
-                i = 0;
-            foreach (Vehicle c in carsEast)
+                danger[3] = true;
+            return i;
+        }
+        int checkJamSouth()
+        {
+            int i = 0;
+            foreach (Vehicle v in carsSouth)
             {
-                if (c.isWaiting)
+                if (v.isWaiting)
                     i++;
             }
-            if (i == 9)
-                return true;
+            if (i < 3)
+                danger[2] = false;
             else
-                i = 0;
+                danger[2] = true;
+            return i;
+        }
+        int checkJamWest()
+        {
+            int i = 0;
+            foreach (Vehicle v in carsWest)
+            {
+                if (v.isWaiting)
+                    i++;
+            }
+            if (i < 8)
+                danger[1] = false;
+            else
+                danger[1] = true;
+            return i;
+        }
+        public bool checkJam()
+        {
+            if (checkJamNorth() == 5)
+                return true;
+            else if (checkJamWest() == 9)
+                return true;
+            else if (checkJamSouth() == 4)
+                return true;
+            else if (checkJamEast() == 9)
+                return true;
             return false;
+        }
+        public void checkDanger(Graphics g)
+        {
+            for (int i = 0; i < 4; i++)
+                if (danger[i])
+                    drawDangerZone(g, i);
+        }
+        public void drawDangerZone(Graphics g, int side)
+        {
+            Brush b = null;
+            if (flash == 1)
+            {
+                b = new SolidBrush(Color.FromArgb(50, Color.Red));
+                flash = 2;
+            }
+            else
+            {
+                b = new SolidBrush(Color.FromArgb(100, Color.Red));
+                flash = 1;
+            }
+
+            if(side == 0)
+                g.FillRectangle(b, new Rectangle(560, 0, 90, 215));
+            else if(side == 1)
+                g.FillRectangle(b, new Rectangle(0, 359, 483, 74));
+            else if(side == 2)
+                g.FillRectangle(b, new Rectangle(651, 498, 90, 190));
+            else
+                g.FillRectangle(b, new Rectangle(818, 280, 455, 77));
+            b.Dispose();
         }
         public void drawBam(Point loc, Graphics g)
         {            

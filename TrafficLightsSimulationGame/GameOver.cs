@@ -17,32 +17,20 @@ namespace TrafficLightsSimulationGame
         public bool nova { get; set; }
         public Options def { get; set; }
         public SoundPlayer kopce;
-        Timer t;
-        public GameOver(Options d, int score, string message)
+        public GameOver(Options d, string message)
         {
             InitializeComponent();
             def = d;
-            lblScore.Text = score.ToString();
+            lblScore.Text = Stage.score.ToString();
             lblMessage.Text = message;
             kopce = new SoundPlayer(Resources.kopce);
-            panel1.BackgroundImage = Resources.y_u_do_dis;
             nova = false;
-            t = new Timer();
-            t.Interval = 1500;
-            t.Tick += new EventHandler(T_Tick);
-            t.Start();
             this.FormBorderStyle = FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.ControlBox = false;
             this.BackColor = Color.Gray;
             this.TransparencyKey = Color.Gray;
-        }
-
-        private void T_Tick(object sender, EventArgs e)
-        {
-            panel1.Visible = false;
-            t.Stop();
         }
 
         private void button1_Click(object sender, EventArgs e)

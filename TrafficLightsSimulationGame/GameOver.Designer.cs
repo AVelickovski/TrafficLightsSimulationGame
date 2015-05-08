@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
             this.lblScore = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,19 +109,11 @@
             this.lblScore.TabIndex = 6;
             this.lblScore.Text = "0";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(25, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 428);
-            this.panel1.TabIndex = 3;
-            // 
             // GameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 490);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(400, 484);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblScore);
@@ -146,6 +137,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.Label lblScore;
-        private System.Windows.Forms.Panel panel1;
     }
 }

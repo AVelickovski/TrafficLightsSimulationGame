@@ -202,6 +202,7 @@ namespace TrafficLightsSimulationGame
                         {
                             velocity = 0;
                             isWaiting = true;
+                            return;
                         }
                     }
                     if (Y+Model.Size.Height > 215)
@@ -229,6 +230,7 @@ namespace TrafficLightsSimulationGame
                         {
                             velocity = 0;
                             isWaiting = true;
+                            return;
                         }
                     }
                     if (Y < 498)
@@ -256,9 +258,8 @@ namespace TrafficLightsSimulationGame
                         {
                             velocity = 0;
                             isWaiting = true;
+                            return;
                         }
-                        else
-                            isWaiting = false;
                     }
                     if (X  < 820)
                         X -= velocity;
@@ -285,9 +286,8 @@ namespace TrafficLightsSimulationGame
                         {
                             velocity = 0;
                             isWaiting = true;
+                            return;
                         }
-                        else
-                            isWaiting = false;
                     }
                     if (X + Model.Size.Width > 482)
                         X += velocity;
