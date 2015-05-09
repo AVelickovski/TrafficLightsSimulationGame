@@ -39,6 +39,8 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.SpringGreen;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Snap ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.Location = new System.Drawing.Point(352, 88);
             this.btnStart.Name = "btnStart";
@@ -52,6 +54,8 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Snap ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(352, 352);
             this.btnClose.Name = "btnClose";
@@ -65,6 +69,8 @@
             // 
             this.btnGuide.BackColor = System.Drawing.Color.Yellow;
             this.btnGuide.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuide.FlatAppearance.BorderSize = 0;
+            this.btnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuide.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuide.Location = new System.Drawing.Point(352, 176);
             this.btnGuide.Name = "btnGuide";
@@ -78,6 +84,8 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Aqua;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(352, 264);
             this.button1.Name = "button1";
