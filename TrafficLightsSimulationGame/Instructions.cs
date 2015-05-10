@@ -30,7 +30,6 @@ namespace TrafficLightsSimulationGame
         private void btnNext1_Click(object sender, EventArgs e)
         {
             panel2.Visible = true;
-            
         }
 
         private void btnBack2_Click(object sender, EventArgs e)
@@ -42,8 +41,7 @@ namespace TrafficLightsSimulationGame
 
         private void btnNext2_Click(object sender, EventArgs e)
         {
-            panel3.Visible = true;
-         
+            panel3.Visible = true; 
         }
 
         private void btnBack3_Click(object sender, EventArgs e)
@@ -90,22 +88,6 @@ namespace TrafficLightsSimulationGame
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        
-
-        
-
-        
-
-
-      
-
-        
-
-      
-
-
-        
+        }  
     }
 }
