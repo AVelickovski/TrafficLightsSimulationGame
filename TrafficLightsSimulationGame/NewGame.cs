@@ -19,7 +19,7 @@ namespace TrafficLightsSimulationGame
         Random rnd;
         Point pCars,pMan;
         Timer NextMove, CarSpawn,Delay,ManSpawn;
-        public SoundPlayer kopce;
+        public SoundPlayer bgSound;
         public SoundPlayer scream;
         public Options defOptions;
 
@@ -40,7 +40,8 @@ namespace TrafficLightsSimulationGame
             Width = background.Size.Width;
             Height = background.Size.Height+20;
             DoubleBuffered = true;
-            kopce = new SoundPlayer(Resources.kopce);
+            bgSound = new SoundPlayer(Resources.EDM_Detection_Mode);
+            bgSound.Play();
             rnd = new Random();
             ManSpawn = new Timer();
             ManSpawn.Tick += new EventHandler(ManSpawn_Tick);
@@ -86,6 +87,7 @@ namespace TrafficLightsSimulationGame
                 NextMove.Start();
                 CarSpawn.Start();
                 ManSpawn.Start();
+                bgSound.Play();
                 Invalidate();
             }
             else
@@ -148,28 +150,24 @@ namespace TrafficLightsSimulationGame
             if (e.X >= stage.Lights.Lights[0].X && e.X <= stage.Lights.Lights[0].X + stage.Lights.Lights[0].getWidth() + 20 && e.Y >= stage.Lights.Lights[0].Y && e.Y <= stage.Lights.Lights[0].Y + stage.Lights.Lights[0].getHeight() + 20)
             {
                 if (defOptions.sound == true)
-                    kopce.Play();
                 stage.Lights.Lights[0].changeLight();
                 Invalidate();
             }
             else if (e.X >= stage.Lights.Lights[1].X && e.X <= stage.Lights.Lights[1].X + stage.Lights.Lights[1].getWidth() + 20 && e.Y >= stage.Lights.Lights[1].Y && e.Y <= stage.Lights.Lights[1].Y + stage.Lights.Lights[1].getHeight() + 20)
             {
                 if (defOptions.sound == true)
-                    kopce.Play();
                 stage.Lights.Lights[1].changeLight();
                 Invalidate();
             }
             else if (e.X >= stage.Lights.Lights[2].X && e.X <= stage.Lights.Lights[2].X + stage.Lights.Lights[2].getWidth() + 20 && e.Y >= stage.Lights.Lights[2].Y && e.Y <= stage.Lights.Lights[2].Y + stage.Lights.Lights[2].getHeight() + 20)
             {
                 if (defOptions.sound == true)
-                    kopce.Play();
                 stage.Lights.Lights[2].changeLight();
                 Invalidate();
             }
             else if (e.X >= stage.Lights.Lights[3].X && e.X <= stage.Lights.Lights[3].X + stage.Lights.Lights[3].getWidth() + 20 && e.Y >= stage.Lights.Lights[3].Y && e.Y <= stage.Lights.Lights[3].Y + stage.Lights.Lights[3].getHeight() + 20)
             {
                 if (defOptions.sound == true)
-                    kopce.Play();
                 stage.Lights.Lights[3].changeLight();
                 Invalidate();
             }
