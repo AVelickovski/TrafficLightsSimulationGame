@@ -56,7 +56,7 @@ namespace TrafficLightsSimulationGame
 
             else
             {
-                CarSpawn.Interval = 1500;
+                CarSpawn.Interval = 1000;
                 ManSpawn.Interval = 5000;
             }
                 
