@@ -12,14 +12,10 @@ using TrafficLightsSimulationGame.Properties;
 namespace TrafficLightsSimulationGame
 {
     public partial class Instructions : Form
-    {
-        Image sudar;
-        
+    {  
         public Instructions()
         {
-            InitializeComponent();
-            sudar = Resources.tomato;
-            
+            InitializeComponent(); 
         }
 
         private void btnBack1_Click(object sender, EventArgs e)

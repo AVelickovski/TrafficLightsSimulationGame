@@ -655,7 +655,7 @@ namespace TrafficLightsSimulationGame
             else if(side == 2)
                 g.FillRectangle(b, new Rectangle(651, 498, 90, 190));
             else
-                g.FillRectangle(b, new Rectangle(818, 280, 455, 77));
+                g.FillRectangle(b, new Rectangle(818, 280, 483, 77));
             b.Dispose();
         }
         public void drawBam(Point loc, Graphics g)
