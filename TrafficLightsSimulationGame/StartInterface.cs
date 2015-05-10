@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using TrafficLightsSimulationGame.Properties;
+using WMPLib;
 
 namespace TrafficLightsSimulationGame
 {
@@ -47,6 +48,9 @@ namespace TrafficLightsSimulationGame
 
         private void btnGuide_Click(object sender, EventArgs e)
         {
+            var player1 = new WMPLib.WindowsMediaPlayer();
+            player1.URL = @"E:\Music\N.O.H.A\Dive In Your Life (2007)\03 - Tu Café (Album Version).mp3";
+            player1.controls.play();
             if(defaultOptions.sound == true)
                 kopce.Play();
             Instructions ins = new Instructions();
@@ -132,8 +136,6 @@ namespace TrafficLightsSimulationGame
             btnOptions.Height = 82;
             btnOptions.Width = 273;
            
-        }
-
-       
+        }       
     }
 }

@@ -33,13 +33,15 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnGuide = new System.Windows.Forms.Button();
             this.btnOptions = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStart
             // 
             this.btnStart.BackColor = System.Drawing.Color.SpringGreen;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStart.FlatAppearance.BorderSize = 0;
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Snap ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -58,7 +60,6 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Snap ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,7 +78,6 @@
             // 
             this.btnGuide.BackColor = System.Drawing.Color.Yellow;
             this.btnGuide.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuide.FlatAppearance.BorderSize = 0;
             this.btnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuide.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,11 +109,21 @@
             this.btnOptions.MouseEnter += new System.EventHandler(this.btnOptions_MouseEnter);
             this.btnOptions.MouseLeave += new System.EventHandler(this.btnOptions_MouseLeave);
             // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(118, 368);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(75, 23);
+            this.axWindowsMediaPlayer1.TabIndex = 4;
+            // 
             // StartInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(968, 491);
+            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.btnGuide);
             this.Controls.Add(this.btnClose);
@@ -128,6 +138,7 @@
             this.Text = "TrafficLightsSimulationGame";
             this.Load += new System.EventHandler(this.StartInterface_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.StartInterface_Paint);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,6 +148,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnGuide;
         private System.Windows.Forms.Button btnOptions;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
     }
 }
 
