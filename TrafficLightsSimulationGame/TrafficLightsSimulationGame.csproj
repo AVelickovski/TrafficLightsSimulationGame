@@ -232,12 +232,6 @@
     <None Include="Resources\crveno.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\predsudar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\skoroubistvo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\kid.png" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +239,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sudar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pzabrana.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\predsudar1.png" />

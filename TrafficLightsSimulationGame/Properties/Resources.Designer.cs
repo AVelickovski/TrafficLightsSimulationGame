@@ -292,9 +292,9 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap predsudar {
+        internal static System.Drawing.Bitmap predsudar1 {
             get {
-                object obj = ResourceManager.GetObject("predsudar", resourceCulture);
+                object obj = ResourceManager.GetObject("predsudar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -302,9 +302,9 @@ namespace TrafficLightsSimulationGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap predsudar1 {
+        internal static System.Drawing.Bitmap pzabrana {
             get {
-                object obj = ResourceManager.GetObject("predsudar1", resourceCulture);
+                object obj = ResourceManager.GetObject("pzabrana", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -324,16 +324,6 @@ namespace TrafficLightsSimulationGame.Properties {
         internal static System.Drawing.Bitmap signali {
             get {
                 object obj = ResourceManager.GetObject("signali", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap skoroubistvo {
-            get {
-                object obj = ResourceManager.GetObject("skoroubistvo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
