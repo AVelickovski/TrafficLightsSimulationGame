@@ -41,9 +41,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(25, 388);
+            this.button1.Location = new System.Drawing.Point(25, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 52);
             this.button1.TabIndex = 0;
@@ -54,9 +56,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(205, 388);
+            this.button2.Location = new System.Drawing.Point(205, 394);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 52);
             this.button2.TabIndex = 1;
@@ -79,7 +83,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 332);
+            this.label1.Location = new System.Drawing.Point(71, 337);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(213, 33);
             this.label1.TabIndex = 4;
@@ -103,7 +107,7 @@
             this.lblScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
             this.lblScore.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore.ForeColor = System.Drawing.Color.White;
-            this.lblScore.Location = new System.Drawing.Point(284, 332);
+            this.lblScore.Location = new System.Drawing.Point(290, 337);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(32, 33);
             this.lblScore.TabIndex = 6;

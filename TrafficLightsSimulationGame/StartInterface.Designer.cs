@@ -39,7 +39,12 @@
             // 
             this.btnStart.BackColor = System.Drawing.Color.SpringGreen;
             this.btnStart.Cursor = System.Windows.Forms.Cursors.Hand;
+<<<<<<< HEAD
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+=======
+            this.btnStart.FlatAppearance.BorderSize = 0;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+>>>>>>> 04005bef45717826ba3bc56077f99330477607c2
             this.btnStart.Font = new System.Drawing.Font("Snap ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStart.ForeColor = System.Drawing.Color.Black;
             this.btnStart.Location = new System.Drawing.Point(352, 34);
@@ -56,7 +61,12 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+<<<<<<< HEAD
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+=======
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+>>>>>>> 04005bef45717826ba3bc56077f99330477607c2
             this.btnClose.Font = new System.Drawing.Font("Snap ITC", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Location = new System.Drawing.Point(352, 382);
@@ -73,7 +83,12 @@
             // 
             this.btnGuide.BackColor = System.Drawing.Color.Yellow;
             this.btnGuide.Cursor = System.Windows.Forms.Cursors.Hand;
+<<<<<<< HEAD
             this.btnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+=======
+            this.btnGuide.FlatAppearance.BorderSize = 0;
+            this.btnGuide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+>>>>>>> 04005bef45717826ba3bc56077f99330477607c2
             this.btnGuide.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuide.ForeColor = System.Drawing.Color.Black;
             this.btnGuide.Location = new System.Drawing.Point(352, 155);
@@ -88,6 +103,7 @@
             // 
             // btnOptions
             // 
+<<<<<<< HEAD
             this.btnOptions.BackColor = System.Drawing.Color.Aqua;
             this.btnOptions.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOptions.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -102,6 +118,20 @@
             this.btnOptions.Click += new System.EventHandler(this.button1_Click);
             this.btnOptions.MouseEnter += new System.EventHandler(this.btnOptions_MouseEnter);
             this.btnOptions.MouseLeave += new System.EventHandler(this.btnOptions_MouseLeave);
+=======
+            this.button1.BackColor = System.Drawing.Color.Aqua;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Snap ITC", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(352, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(273, 82);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "OPTIONS";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> 04005bef45717826ba3bc56077f99330477607c2
             // 
             // StartInterface
             // 
