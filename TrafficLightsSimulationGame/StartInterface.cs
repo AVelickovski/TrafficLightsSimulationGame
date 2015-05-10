@@ -72,5 +72,68 @@ namespace TrafficLightsSimulationGame
             defaultOptions.StartPosition = FormStartPosition.CenterScreen;
             defaultOptions.ShowDialog();
         }
+
+        private void btnStart_MouseEnter(object sender, EventArgs e)
+        {
+            btnStart.Height = 90;
+            btnStart.Width = 287;
+           
+
+        }
+
+        private void btnStart_MouseLeave(object sender, EventArgs e)
+        {
+            btnStart.Height = 82;
+            btnStart.Width = 273;
+           
+        }
+
+        private void btnGuide_MouseEnter(object sender, EventArgs e)
+        {
+            btnGuide.Height = 90;
+            btnGuide.Width = 287;
+           
+        }
+
+        private void btnGuide_MouseLeave(object sender, EventArgs e)
+        {
+            btnGuide.Height = 82;
+            btnGuide.Width = 273;
+          
+        }
+
+        
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
+        {
+            btnClose.Height = 90;
+            btnClose.Width = 287;
+            
+            
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.Height = 82;
+            btnClose.Width = 273;
+            
+        }
+
+        private void btnOptions_MouseEnter(object sender, EventArgs e)
+        {
+            btnOptions.Height = 90;
+            btnOptions.Width = 287;
+           
+
+        }
+
+        private void btnOptions_MouseLeave(object sender, EventArgs e)
+        {
+            btnOptions.Height = 82;
+            btnOptions.Width = 273;
+           
+        }
+
+       
     }
 }

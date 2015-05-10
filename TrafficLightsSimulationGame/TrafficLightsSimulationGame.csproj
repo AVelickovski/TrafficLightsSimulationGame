@@ -216,6 +216,39 @@
   <ItemGroup>
     <None Include="Resources\game_over.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pocetna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signali.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strelka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\traektorija.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crveno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\predsudar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\skoroubistvo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ubistvo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sudar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\predsudar1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
